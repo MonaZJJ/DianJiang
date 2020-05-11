@@ -1,0 +1,115 @@
+.collectBox {
+    min-height: 100vh;
+    background-color: #F7F4F8;
+}
+
+.collectContent {
+    width: 355px;
+    margin: 0 auto;
+
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.collectItem {
+    margin-bottom: 11px;
+    border-radius: 10px;
+    background-color: #fff;
+    min-height: 120px;
+}
+
+.productImg {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 20px 10px 20px 15px;
+}
+
+.productRightBox {
+    float: left;
+    width: 224px;
+    height: 80px;
+    position: relative;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productName {
+    font-size: 12px;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.productSku {
+    font-size: 12px;
+    color: #999;
+}
+
+.priceBox {
+    overflow: hidden;
+    width: 224px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.price {
+    color: #E53333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 12px;
+    color: #999;
+}
+
+.delectBtn {
+    color: #fff;
+    font-size: 15px;
+    width: 49px;
+    display: block;
+    line-height: 120px;
+    text-align: center;
+    background-color: #56BD6B;
+    border-radius: 10px;
+}
+.totalBox{
+    height: 44px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #333;
+}
+.rightBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.colorBox{
+    min-width: 28px;
+    height: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    background: #56BD6B;
+    border-radius: 7px;
+    margin: 0 10px;
+}

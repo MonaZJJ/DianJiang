@@ -1,0 +1,119 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #F7F5F6;
+}
+
+.walletBox {
+    padding: 15px;
+}
+
+.topBox {
+    width: 344px;
+    height: 158px;
+    border-radius: 10px;
+    background-color: #56BD6B;
+    color: #fff;
+}
+
+.img {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+}
+
+.first {
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 40px;
+    margin-left: 25px;
+}
+
+.money {
+    font-size: 40px;
+    margin-left: 28px;
+    margin-top: 30px;
+}
+
+.line {
+    height: 49px;
+    font-size: 13px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px
+}
+
+.pay {
+    font-size: 18px;
+    color: #E53333;
+    font-weight: bold;
+}
+
+.lineBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.invest {
+    width: 344px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 60px;
+    text-align: center;
+    /*position: absolute;*/
+    /*left: 16px;*/
+    /*bottom: 16px;*/
+}
+
+.detail {
+    width: 105px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #56BD6B;
+    border-radius: 0px 15px 15px 0px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.itemBox {
+    font-size: 14px;
+    background-color: #fff;
+    margin: 15px 0px;
+}
+
+.itemBox >>> .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F7F4F8;
+    padding: 12px 14px;
+}
+
+.itemBox >>> .item:last-child {
+    border: none;
+}
+
+.itemBox >>> .title {
+    font-size: 15px;
+}
+
+.itemBox >>> .num {
+    margin-top: 13px;
+    color: #999;
+}
+
+.itemBox >>> .price {
+    font-size: 20px;
+    color: #E53333;
+}

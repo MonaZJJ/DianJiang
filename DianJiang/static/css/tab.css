@@ -1,0 +1,19 @@
+.van-tabs__line {
+    width: 37px !important;
+    position: absolute;
+}
+
+.allBox .van-tabs__line {
+    background-color: #56bd6b;
+}
+
+.van-tabs {
+    padding-bottom: 12px;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+}

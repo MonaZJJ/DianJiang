@@ -1,0 +1,152 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.topBox {
+    width: 100%;
+    height: 130px;
+    background-color: #56bd6b;
+    color: #fff;
+}
+
+.topInfoBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 17px;
+}
+
+.topFirst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.name {
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+}
+
+.num {
+    font-size: 12px;
+}
+
+.itemBox {
+    width: 355px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    top: -20px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 18px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.money {
+    color: #DE1E31;
+    font-size: 20px;
+}
+
+.desc {
+    color: #999999;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.itemProject {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    ;
+}
+
+.itemProject>a {
+    /* width: 25%; */
+}
+
+.itemTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 21px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #999;
+}
+
+.itemTwo>img {
+    margin-bottom: 14px;
+}
+
+.tab-box {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 49px;
+    background-color: #fff;
+    color: #909399;
+    font-size: 10px;
+    text-align: center;
+}
+
+.tab-box img {
+    vertical-align: top;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.tab-box .text {
+    color: #909399;
+    line-height: 14px;
+}
+
+.tab-box .text.active {
+    color: #67C23A;
+}
+
+.scan {
+    position: relative;
+}
+
+.scan img {
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+.scanText {
+    font-size: 12px;
+    line-height: 17px;
+    color: #56BD6B;
+    margin-top: 30px;
+}

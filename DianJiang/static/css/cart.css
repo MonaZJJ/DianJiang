@@ -1,0 +1,266 @@
+.allBox {
+    min-height: 100vh;
+    background: #f5f5f5;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.tipsBox{
+    height: 44px;
+    background: #9CE0AA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+.cartBox {
+    padding-bottom: 100px;
+}
+
+.cartItem {
+    /*background: #fff;*/
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    padding-right: 0;
+}
+.backDiv{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    height: 120px;
+}
+.cartTitle {
+    height: 50px;
+}
+
+.storeIcon {
+    float: left;
+    margin-right: 17px;
+    position: relative;
+    top: 16px;
+    width: 20px;
+    height: 20px;
+}
+
+.storeIconBox {
+    margin-right: 10px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    top: 17px;
+}
+
+.storeImg {
+    width: 18px;
+    height: 18px;
+    float: left;
+}
+
+.storeName {
+    color: #333;
+    float: left;
+    font-size: 13px;
+    margin-right: 10px;
+    position: relative;
+    top: 17px;
+}
+
+.rightIcon {
+    width: 12px;
+    height: 12px;
+    float: left;
+    position: relative;
+    top: 20px;
+}
+
+.productItem {
+    box-sizing: border-box;
+    /*background: #fff;*/
+    /*overflow: hidden;*/
+    height: 120px;
+    width: 355px;
+    border-radius: 10px;
+}
+
+.van-swipe-cell {
+    height: 100%;
+}
+
+.productIcon {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    top: 50px;
+    width: 20px;
+    height: 20px;
+}
+
+.productImg {
+    width: 80px;
+    height: 88px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 16px;
+    margin-left: 15px;
+}
+
+.productRightBox {
+    float: left;
+    width: 200px;
+    height: 88px;
+    position: relative;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productName {
+    font-size: 13px;
+    color: #222;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.productSku{
+    font-size: 12px;
+    color: #999;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.priceBox {
+    overflow: hidden;
+    width: 210px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.price {
+    color: #E53333;
+    font-size: 14px;
+}
+
+.allSelectText{
+    font-size: 14px;
+    margin-left: 10px;
+    color: #333;
+}
+.delectBtn {
+    color: #fff;
+    font-size: 15px;
+    width: 50px;
+    display: block;
+    line-height: 120px;
+    text-align: center;
+    background-color: #56BD6B;
+    border-radius: 10px;
+}
+
+.payBox {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 375px;
+    height: 44px;
+    background: #fff;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payRight {
+    float: right;
+    background: #56BD6B;
+    color: #fff;
+    font-size: 15px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    width: 120px;
+}
+
+.payLeft {
+    float: left;
+    overflow: hidden;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.payMiddle {
+    overflow: hidden;
+    float: left;
+    /*position: relative;*/
+    /*top:18px;*/
+    height: 44px;
+    line-height: 44px;
+}
+
+.allIcon {
+    /*margin-top: 8px;*/
+    margin-bottom: 2px;
+    width: 20px;
+    height: 20px;
+}
+
+.left {
+    float: left;
+    font-size: 14px;
+}
+
+.bold {
+    font-weight: 800;
+    margin-right: 10px;
+    color: #E53333;
+    font-size: 14px;
+}
+
+.noProduct {
+    padding-top: 80px;
+    width: 375px;
+    text-align: center;
+}
+
+.noProductImg {
+    width: 120px;
+    left: 114px;
+    margin-bottom: 30px;
+}
+
+.noText {
+    color: #666;
+    font-size: 16px;
+}
+
+.allBox >>> .van-stepper__minus{
+    height: 22px;
+    background: #fff;
+}
+.allBox >>> .van-stepper__plus{
+    height: 22px;
+    background: #fff;
+}
+.allBox >>> .van-stepper__input{
+    height: 22px;
+    width: 34px;
+}

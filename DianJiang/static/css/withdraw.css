@@ -1,0 +1,162 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #F7F5F6;
+}
+
+.allBox>>>[class*="van-hairline"]::after {
+    border: none;
+}
+
+.withdrawContent {
+    padding: 15px;
+}
+
+.bgBox {
+    background-image: url("../images/member/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bgContent {
+    display: flex;
+    align-items: center;
+    padding-top: 14px;
+    padding-left: 9px;
+}
+
+/* .info {
+    width: 200px;
+} */
+
+.head {
+    width: 72px;
+    height: 70px;
+    margin-right: 25px;
+    border-radius: 50%;
+}
+
+.name {
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    color: #fff;
+}
+
+.tip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 4px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.tip>span {
+    margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grade {
+    font-size: 11px;
+    color: #fff;
+    float: left;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 9px;
+    /* padding-right: 20px; */
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.num {
+    font-size: 13px;
+    color: #EEEEEE;
+    margin-top: 15px;
+}
+
+.bgItem {
+    color: #fff;
+    width: 344px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.desc {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.money {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.withdrawBox {
+    width: 345px;
+    height: 333px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.withdrawItem {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 5px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-left: 15px;
+}
+
+.inputBox {
+    width: 160px;
+}
+
+.rightBox {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.tips {
+    font-size: 30px;
+}
+
+.title {
+    font-size: 15px;
+}
+
+.money {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.descBox {
+    font-size: 11px;
+    color: #999;
+    margin-top: 13px;
+    margin-left: 13px;
+}
+
+.conButton {
+    width: 289px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 18px;
+    background-color: #56BD6B;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 33px;
+    left: 28px;
+}

@@ -1,0 +1,151 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.orderBox {
+    width: 355px;
+    margin: 10px;
+}
+
+.outBox {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    padding-bottom: 20px;
+}
+
+.storeBox {
+    height: 49px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 11px;
+    padding-right: 15px;
+}
+
+.storeName {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.storeName>span {
+    margin-left: 6px;
+}
+
+.state {
+    color: #FFB200;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: row;
+    background-color: #F8F6F9;
+    padding: 24px 15px 18px 15px;
+}
+
+.productImg {
+    width: 71px;
+    height: 71px;
+    border-radius: 5px;
+}
+
+.productBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.productItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 21px;
+}
+
+.productName {
+    width: 160px;
+    font-size: 13px;
+    color: #333;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical;
+    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2;
+    /** 显示的行数 **/
+    overflow: hidden;
+    /** 隐藏超出的内容 **/
+}
+
+.productTop {
+    font-size: 13px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.productBottom {
+    font-size: 12px;
+    color: #999;
+}
+
+.bottomBox {
+    /*height: 94px;*/
+    /*box-sizing: border-box;*/
+    /*padding-bottom: 20px;*/
+}
+
+.totalBox {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    margin-right: 16px;
+}
+
+.actionBox {
+    font-size: 12px;
+    margin-top: 23px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15px;
+    /*padding-bottom: 20px;*/
+}
+
+.price {
+    color: #E53333;
+}
+
+.btnBox {
+    width: 75px;
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+.whiteBtn {
+    color: #fff;
+    background-color: #56BD6B;
+    border: 1px solid #56BD6B;
+}
+
+.greenBtn {
+    border: 1px solid #56BD6B;
+    color: #56BD6B;
+}
+
+.whiteGreenBtn {
+    color: #fff;
+    background-color: #9CE0AA;
+}

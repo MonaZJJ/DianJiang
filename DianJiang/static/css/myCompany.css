@@ -1,0 +1,8 @@
+
+.tabContext >>> img {
+    width: 100%!important;
+    float: left
+}
+.tabContext >>> p{
+    margin: 0;
+}

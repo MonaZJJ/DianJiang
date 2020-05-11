@@ -1,0 +1,50 @@
+.allBox{
+    min-height: 100vh;
+    padding: 10px 10px 18px 10px;
+    background-color: #252527;
+}
+.rules-box{
+    background-color: #3D393F;
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 16px 0 13px 0;
+}
+.rules-box .title{
+    font-size: 17px;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #282828;
+}
+
+.rule-item{
+    font-size: 13px;
+    margin: 0 15px;
+    border-bottom: 1px solid #282828;
+    line-height: 18px;
+    padding: 12px 20px 12px 30px;
+    position: relative;
+}
+.rule-item:before{
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: 2px;
+    transform: translate(0,-50%);
+    width: 14px;
+    height: 14px;
+    background-color: #282828;
+    border-radius: 50%;
+}
+.applyBtn{
+    width: 190px;
+    height: 34px;
+    background-color: #cccccc;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 34px;
+    margin: 0 auto;
+    margin-top: 15px;
+    border-radius: 17px;
+}

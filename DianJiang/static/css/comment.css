@@ -1,0 +1,142 @@
+.assessBox {
+    min-height: 100vh;
+    background-color: #F1EFF2;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.proItem {
+    background-color: #fff;
+    height: 120px;
+    padding: 0 13px 0 15px;
+    border-radius: 10px;
+}
+
+.proItem img {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: 24px;
+}
+
+.proItem>div {
+    width: 235px;
+    font-size: 12px;
+    color: #999;
+    float: right;
+    margin-top: 23px;
+}
+
+.proName {
+    color: #333333;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.proItem>div div span.floatLeft {
+    width: 160px;
+}
+
+.proName span.floatLeft {
+    height: 34px;
+    /*line-height: 17px;*/
+}
+
+.assess {
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.assessContent {
+    width: 338px;
+    height: 120px;
+    font-size: 13px;
+    color: #333;
+    border: none;
+    margin: 10px 8px;
+    text-indent: 20px;
+    line-height: 2;
+}
+
+.uploadBox {
+
+    margin-left: 11px;
+    margin-bottom: 12px;
+}
+>>>.van-uploader__input-wrapper{
+    text-align: center;
+    border: 1px dashed #333;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+}
+.img {
+    width: 38px;
+    height: 30px;
+    margin-top: 14px;
+}
+
+.addImg {
+    font-size: 13px;
+    color: #999;
+}
+
+.btnBox {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+.submitBtn {
+    width: 289px;
+    height: 35px;
+    line-height: 34px;
+    border-radius: 17.5px;
+    background-color: #56BD6B;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+.itemBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 15px;
+    background: #fff;
+    font-size: 14px;
+    min-height: 60px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.itemLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.itemTitle {
+    font-size: 14px;
+    color: #666;
+    margin-right: 16px;
+}
+
+.itemContent {
+    width: 230px;
+}
+
+.rightIcon {
+    width: 6px;
+    height: 11px;
+}

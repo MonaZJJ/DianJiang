@@ -1,0 +1,155 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #F6F6F6;
+}
+
+.productItem {
+    margin-bottom: 11px;
+    border-radius: 10px;
+    background-color: #fff;
+    height: 112.5px;
+}
+
+.productBox {
+    padding: 10px 10px 16px 10px;
+}
+
+.productImg {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin: 20px 22px 21px 15px;
+}
+
+.productRightBox {
+    float: left;
+    width: 224px;
+    height: 60px;
+    position: relative;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.productName {
+    font-size: 12px;
+    color: #333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.priceBox {
+    overflow: hidden;
+    width: 224px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.num {
+    color: #999;
+    font-size: 12px;
+}
+
+.red {
+    color: #FF0303;
+    font-size: 12px;
+}
+
+.bigBox {
+    background: #fff;
+    box-sizing: border-box;
+    margin: 0px 10px;
+    border-radius: 10px;
+}
+
+.logisticsBox {
+    padding: 28px 30px 0px 22.5px;
+    padding-left: 70px;
+}
+
+.title {
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    padding: 28.5px 10px 0px 24.5px;
+}
+
+.item_info {
+    min-height: 50px;
+    position: relative;
+    padding-bottom: 20px;
+    border-left: 1px solid #DDDDDD;
+}
+
+.item_infoTop {
+    /* min-height: 50px; */
+    position: relative;
+    /* padding-bottom: 20px; */
+    /* border-left: 1px solid #DDDDDD; */
+    font-size: 12px;
+    color: #aaa;
+}
+
+.icon_sign {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    left: -44px;
+    top: 0px;
+    background: #b7b7b7;
+    border-radius: 50%;
+}
+
+.icon_sign_dot {
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: -3.5px;
+    top: 0px;
+    background: #CCCCCC;
+    border-radius: 50%;
+}
+
+.title_desc {
+    font-size: 12px;
+    color: #999999;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.time_date {
+    color: #BBBBBB;
+    font-size: 10px;
+    position: absolute;
+    left: -56px;
+    top: 10px;
+}
+
+.time_dateNext {
+    color: #BBBBBB;
+    font-size: 10px;
+    position: absolute;
+    left: -56px;
+    top: -4px;
+}
+
+.outBox:last-child .item_info {
+    border-left: none !important;
+}
+
+.icon {
+    width: 10px;
+    height: 10px;
+    background: #FF0303;
+    border-radius: 50%;
+    position: absolute;
+    left: -5.5px;
+    top: 0px;
+}

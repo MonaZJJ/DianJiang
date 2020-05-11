@@ -1,0 +1,58 @@
+.outBox {
+    height: 100vh;
+    background: #f7f4f8;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.innerBox {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 35px;
+    width: 355px;
+    margin: 0 auto;
+
+}
+
+.innerItem {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 12px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.innerBox .innerItem:last-child {
+    border-bottom: 0;
+}
+
+.title {
+    color: #999;
+}
+
+.inputItem {
+    width: 200px;
+    text-align: right;
+    border: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.btnBox {
+    width: 290px;
+    height: 35px;
+    border-radius: 18px;
+    background: #56BD6B;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 auto;
+    margin-top: 35px;
+}

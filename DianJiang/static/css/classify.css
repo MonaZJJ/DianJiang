@@ -1,0 +1,121 @@
+.allBox{
+    min-height: 100vh;
+    /*width: 100%;*/
+    box-sizing: border-box;
+    padding-bottom: 50px;
+    background-color: #F7F4F8;
+}
+.allBox >>> .van-list__finished-text,
+.allBox >>> .van-list__loading{
+    background-color: #F7F4F8;
+    width: 100%;
+    float: left;
+}
+.left-box{
+    width: 90px;
+    height: 100vh;
+    background-color: #ffffff;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.left-box>div{
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.left-box>div.active{
+    position: relative;
+    color: #56BD6B;
+}
+.left-box>div.active:after{
+    position: absolute;
+    z-index: 1;
+    content: "";
+    width: 5px;
+    height: 50px;
+    background-color: #56BD6B;
+    left: 0;
+    top: 0;
+}
+.left-box>div.greenBtn{
+    width: 75px;
+    height: 28px;
+    line-height: 26px;
+    border:1px solid rgba(86,189,107,1);
+    border-radius: 14px;
+    color: #56BD6B;
+    font-size: 12px;
+    margin: 0 auto;
+    margin-top: 11px;
+    margin-bottom: 22px;
+}
+.left-box>div.greenBtn.greenActive{
+    background-color: #56BD6B;
+    color: #fff;
+}
+
+.right-box{
+    width: 285px;
+    float: right;
+    padding-top: 15px;
+}
+.pro-item{
+    width: 120px;
+    height: 153.5px;
+    background-color: #fff;
+    border-radius: 10px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 18px;
+}
+.pro-item img{
+    width: 100%;
+    height: 120px;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+.pro-item p{
+    color: #333;
+    font-size: 13px;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+.pro-item.integral{
+    height: 170px;
+}
+.pro-item.integral p{
+    text-align: left;
+    padding: 0 5px;
+}
+.pro-item.integral div{
+    color: #999999;
+    font-size: 10px;
+    padding: 0 5px;
+}
+
+
+.integraTtips{
+    position: fixed;
+    z-index: 5;
+    bottom: 65px;
+    left: 105px;
+    font-size: 11px;
+    color:#999999;
+}
+
+.integraTtips p{
+    font-size: 14px;
+    color:#333333;
+    margin: 0;
+    padding: 0;
+}

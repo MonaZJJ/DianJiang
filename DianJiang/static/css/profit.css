@@ -1,0 +1,152 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #F7F5F6;
+}
+
+.profitBox {
+    padding: 15px;
+}
+
+.bgBox {
+    background-image: url("../images/member/bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.bgContent {
+    display: flex;
+    align-items: center;
+    padding-top: 14px;
+    padding-left: 9px;
+}
+
+/* .info {
+    width: 200px;
+} */
+
+.head {
+    width: 72px;
+    height: 70px;
+    margin-right: 25px;
+    border-radius: 50%;
+}
+
+.name {
+    width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    color: #fff;
+}
+
+.grade {
+    color: #fff;
+    float: left;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 9px;
+    /* padding-right: 20px; */
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.num {
+    font-size: 13px;
+    color: #EEEEEE;
+    margin-top: 15px;
+}
+
+.tip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 4px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.tip>span {
+    margin-right: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bgItem {
+    color: #fff;
+    width: 344px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* .bgItem>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+.desc {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.money {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.tips {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    color: #fff;
+    font-size: 11px;
+    border-radius: 10px 0px 0px 10px;
+    width: 64px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.itemBox {
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 11px;
+    width: 344px;
+}
+
+.item {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 24px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.item:last-child {
+    border: none;
+}
+
+.price {
+    color: #E53333;
+}
+
+.myItem {
+    position: relative;
+}
+
+.dian {
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    right: -18px;
+}

@@ -1,0 +1,79 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #F7F4F8;
+}
+
+.integralBox {
+    padding: 9px 16px;
+}
+
+.topBox {
+    background-image: url("../images/member/bg2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 344px;
+    height: 110px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grade {
+    font-size: 13px;
+    margin-top: 24px;
+}
+
+.curr {
+    font-size: 34px;
+}
+
+.desc {
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.detail {
+    width: 105px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 15px;
+    background-color: #56BD6B;
+    border-radius: 0px 15px 15px 0px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.itemBox {
+    font-size: 14px;
+    background-color: #fff;
+    margin: 15px 0px;
+}
+
+.itemBox >>> .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F7F4F8;
+    padding: 12px 14px;
+}
+
+.itemBox >>> .item:last-child {
+    border: none;
+}
+
+.itemBox >>> .title {
+    font-size: 15px;
+}
+
+.itemBox >>> .num {
+    margin-top: 13px;
+    color: #999;
+}
+
+.itemBox >>> .price {
+    font-size: 20px;
+    color: #E53333;
+}

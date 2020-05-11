@@ -1,0 +1,11 @@
+.van-field__body {
+    margin-left: 12px;
+}
+
+.van-cell:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.van-cell:not(:last-child)::after {
+    border-bottom: none;
+}

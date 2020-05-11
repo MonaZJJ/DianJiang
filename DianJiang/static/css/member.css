@@ -1,0 +1,152 @@
+.allBox {
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.topBox {
+    width: 100%;
+    height: 130px;
+    color: #fff;
+    background: url("../../static/images/member/member_bg.jpg");
+    background-repeat:no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+}
+
+.topInfoBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 26px 17px;
+}
+
+.topFirst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.name {
+    /* width: 200px; */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.grade {
+    height: 14px;
+    font-size: 10px;
+    line-height: 14px;
+    padding: 0px 8px;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 4px;
+}
+
+.num {
+    font-size: 11px;
+    padding: 1px 16px;
+    border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    float: left;
+}
+
+.itemBox {
+    width: 325px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+    top: -20px;
+    margin-left: 10px;
+    padding: 0px 15px 19px 15px;
+}
+
+.itemTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D4D6D6;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.itemTitle {
+    font-size: 16px;
+    color: #333;
+}
+
+.more {
+    font-size: 14px;
+    color: #999;
+}
+
+.itemContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999;
+    margin-top: 24px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item>img {
+    margin-bottom: 12px;
+}
+
+.itemProject {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #999;
+    width: 355px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-left: 10px;
+    padding: 21px 0px;
+    margin-bottom: 60px;
+}
+
+.item2 {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.item2:first-child {
+    margin-bottom: 35px;
+}
+
+.item2>img {
+    margin-bottom: 14px;
+}
+.perfectBtn{
+    width: 60px;
+    height: 24px;
+    background: #fff;
+    position: absolute;
+    right:10px;
+    top:55px;
+    font-size: 10px;
+    color: #333;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 12px;
+}

@@ -1,0 +1,76 @@
+.allBox{
+    min-height: 100vh;
+    background-color: #F6F6F6;
+    padding: 22px 15px 0 15px;
+    box-sizing: border-box;
+}
+
+.upgrade-box{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 10px 30px 10px;
+    color:#333333;
+}
+
+.upgrade-box .title{
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 21px;
+    box-shadow:0px 1px 0px 0px rgba(221,221,221,1);
+}
+
+.input-box{
+    height: 112px;
+    border-bottom: 1px solid #E0E0E0;
+    position: relative;
+    overflow: hidden;
+}
+.input-box span{
+    font-size: 30px;
+    position: absolute;
+    top: 45px;
+    left: 14px;
+}
+.input-box input{
+    border: 0;
+    font-size: 50px;
+    height: 90px;
+    line-height: 90px;
+    width: 255px;
+    margin-left: 51px;
+    margin-top: 12px;
+}
+
+.upgrade-box .tips{
+    font-size: 11px;
+    color: #999999;
+    margin: 10px 0 25px 14px;
+}
+
+.upgrade-box .type{
+    font-size: 15px;
+    color: #000;
+    margin-left: 10px;
+    margin-bottom: 84px;
+}
+
+.upgrade-box .type img{
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    margin-right: 5px;
+    position: relative;
+    top: -5px;
+}
+
+.confirmBtn{
+    width: 289px;
+    height: 35px;
+    background-color: #56BD6B;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 auto;
+    border-radius: 17px;
+}

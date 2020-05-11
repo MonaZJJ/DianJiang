@@ -1,0 +1,175 @@
+        .allBox {
+            min-height: 100vh;
+            background-color: #F2F2F4;
+        }
+        
+        .staticsBox {
+            padding: 20px 15.5px;
+        }
+        
+        .bgBox {
+            height: 190px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        
+        .bgContent {
+            display: flex;
+            align-items: center;
+            padding-top: 14px;
+            padding-left: 9px;
+        }
+        
+        .info {
+            width: 200px;
+        }
+        
+        .name {
+            width: 200px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 18px;
+            color: #000;
+        }
+        
+        .head {
+            width: 72.5px;
+            height: 70.5px;
+            margin-right: 26px;
+            border-radius: 50%;
+        }
+        
+        .phone {
+            font-size: 13px;
+            color: #aaa;
+            margin-top: 15px;
+        }
+        
+        .bgItem {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 26px;
+            padding: 0px 20px;
+        }
+        
+        .money {
+            font-size: 20px;
+            color: #ED360A;
+            font-weight: 500;
+        }
+        
+        .desc {
+            font-size: 12px;
+            color: #333;
+            margin-top: 10.5px;
+        }
+        
+        .bgItem>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .line {
+            width: 1px;
+            height: 33.5px;
+            background-color: #979797;
+        }
+        
+        .totalBox {
+            background-color: #fff;
+            border-radius: 10px;
+            margin-top: 16px;
+            padding-top: 20px;
+            padding-bottom: 11px;
+        }
+        
+        .num {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .firstBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .tabBox {
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .line {
+            height: 24px;
+            background-color: #56BD6B;
+        }
+        
+        .picker {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #000;
+        }
+        
+        .down {
+            widows: 10px;
+            height: 6px;
+        }
+        
+        .totalDesc {
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+            background-color: #56BD6B;
+            color: #fff;
+            margin-top: 20px;
+            text-align: center;
+            padding: 0px 8px;
+        }
+        
+        .statics {
+            font-size: 12px;
+            color: #000;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 6px;
+            margin: 0px 10px;
+            border-bottom: 1px solid #ddd;
+            word-break:break-all;
+            word-wrap:break-word;
+        }
+        
+        .tab {
+            text-align: center;
+            width: 40px;
+            height: 24px;
+            line-height: 23px;
+            border: 1px solid #56BD6B;
+        }
+        
+        .day {
+            border-radius: 12px 0px 0px 12px;
+        }
+        
+        .month {
+            border-radius: 0px 12px 12px 0px;
+        }
+        
+        .active {
+            color: #fff;
+            background-color: #56BD6B;
+        }
+        /* .pickView {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            left: 0px;
+        } */
