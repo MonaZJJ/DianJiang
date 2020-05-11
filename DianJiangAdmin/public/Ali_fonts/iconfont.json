@@ -1,0 +1,107 @@
+{
+  "id": "1517910",
+  "name": "商城",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1487295",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e8ca",
+      "unicode_decimal": 59594
+    },
+    {
+      "icon_id": "3367453",
+      "name": "配送员",
+      "font_class": "peisongyuan",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "11862589",
+      "name": "yemian-",
+      "font_class": "yemian-",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "11863057",
+      "name": "编组",
+      "font_class": "bianzu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "11863058",
+      "name": "编组3",
+      "font_class": "bianzu1",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "11863059",
+      "name": "编组5",
+      "font_class": "bianzu2",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "11863060",
+      "name": "编组2",
+      "font_class": "bianzu3",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "11863061",
+      "name": "编组7",
+      "font_class": "bianzu4",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "11863062",
+      "name": "编组9",
+      "font_class": "bianzu5",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11863063",
+      "name": "编组8",
+      "font_class": "bianzu6",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "11863064",
+      "name": "编组10",
+      "font_class": "bianzu7",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "11863065",
+      "name": "编组4",
+      "font_class": "bianzu8",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "11863066",
+      "name": "编组11",
+      "font_class": "bianzu9",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "11863067",
+      "name": "编组12",
+      "font_class": "bianzu10",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}

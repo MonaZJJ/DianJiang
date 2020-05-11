@@ -1,0 +1,114 @@
+<!--productRecyclebin.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}评价列表{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/index.css">
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/product_evaluate.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+{{/block}} {{block 'content'}}
+<section>
+    <div class="content container-fluid"
+         style="margin-left:15px;margin-right:15px;padding-left:0px;padding-right:0px;border-bottom: 1px solid #ddd;overflow: hidden;">
+        <div class="main_list_content type_box">
+            <div class="list_title_header" style="float:left;width:100%">
+                <div id="order_tab_box">
+                    <ul class="nav nav-tabs" id="tab">
+                        <li class="active">
+                            <a id="out_all" data-type="0" href="/product/productEvaluate">评价列表</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 总容器box -->
+                <div class="tab-content">
+                    <!--未回复-->
+                    <div class="active tab-pane" id="no_reply">
+                        <div class="choice_condition_box form-inline">
+                            <div class="row" style="margin-bottom: 20px">
+                                <div class="form-group col-lg-3">
+                                    <label>商品名称：</label>
+                                    <input type="text" class="form-control" id="PName" placeholder="">
+                                </div>
+                                <!--<div class="form-group col-lg-3">-->
+                                    <!--<label>店铺名称：</label>-->
+                                    <!--<input type="text" class="form-control" id="storeName" placeholder="">-->
+                                <!--</div>-->
+                                <div class="form-group col-lg-6">
+                                    <label class="">评价时间：</label>
+                                    <input type="text" class="form-control" id="start">
+                                    <label>至</label>
+                                    <input type="text" class="form-control" id="end">
+                                </div>
+
+                            </div>
+                            <div class="row" style="margin-bottom: 20px">
+                                <div class="form-group col-lg-3">
+                                    <button id="search"
+                                            style="width: 79px;background: #0486FE;color: #fff;margin-right: 20px"
+                                            class="btn">
+                                        提交
+                                    </button>
+                                    <button id="resetBtn"
+                                            style="width: 79px;background: #fff;border-radius:4px;border:1px solid rgba(220,223,230,1);box-sizing: border-box"
+                                            class="btn">
+                                        重置
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div>
+                            <table id="evaluateTable" class="table table-bordered table-striped">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- 总容器box end -->
+            </div>
+        </div>
+    </div>
+    <div class="mask">
+        <div class="content-box">
+            <h2>回复客户评价</h2>
+            <a class="close">×</a>
+            <div class="form-horizontal" style="margin-top: 40px;">
+                <div class="evaluateReply row">
+                    <p class="col-sm-2">评分:</p>
+                    <ul class='col-sm-9 starul'>
+                        <li><img src="/public/images/star.png"></li>
+                        <li><img src="/public/images/star.png"></li>
+                        <li><img src="/public/images/star.png"></li>
+                        <li><img src="/public/images/star.png"></li>
+                    </ul>
+                </div>
+                <div class="evaluateReply row">
+                    <p class="col-sm-2">评价内容:</p>
+                    <span class='col-sm-9' id="message">好评！</span>
+                </div>
+                <div class="evaluateReply row">
+                    <p class="col-sm-2">晒图:</p>
+                    <ul class='col-sm-9' id="evaluateImg">
+                        <li><img src=""></li>
+                    </ul>
+                </div>
+                <div class="evaluateReply row">
+                    <p class="col-sm-2">回复:</p>
+                    <span class='col-sm-7'> <textarea class="form-control remark" id="remark"
+                                                      rows="4"></textarea></span>
+                </div>
+            </div>
+            <div class="box-footer">
+                <a class="btn btn-primary" id="replyBtn">回复</a>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+{{block 'footer'}}
+{{/block}}
+{{block 'requirejs'}}
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/js/productEvaluate.js" type="text/babel"></script>
+{{/block}}

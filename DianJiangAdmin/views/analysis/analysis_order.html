@@ -1,0 +1,44 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}订单统计{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/index.css">
+{{/block}}
+
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div style="margin: 0 auto;text-align: center;">
+                <div class="chart-part">
+                    <div>
+                        <div class="head-type">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="javascript:void(0);">订单分析</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="indexBox">
+
+                        </div>
+                        <div id="indexBox2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 总容器box end -->
+        </div>
+    </div>
+</section>
+{{/block}}
+
+{{block 'footer'}}
+{{/block}}
+
+{{block 'requirejs'}}
+<script src="/public/plugins/echarts/echarts.min.js"></script>
+<script src="/public/js/analysis_order.js"></script>
+{{/block}}

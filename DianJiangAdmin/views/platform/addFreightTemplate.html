@@ -1,0 +1,199 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}运费模板添加{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/addFreightTemplate.css">
+<link rel="stylesheet" href="/public/plugins/iCheck/all.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li >
+                            <a data-type="1" href="/platform/freightTemplate">运费模板列表</a>
+                        </li>
+                        <li class="active">
+                            <a data-type="2"  href="javascript:void(0);">添加</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="basicsetup_txet">
+                        <div class="form-group basicsetup_title_next">
+                            <label class="col-md-2 control-label" style="height: 34px;line-height: 34px"><em style="color: red">*</em>模板名称： </label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="templateName" placeholder="长度限制在20字符以内">
+                            </div>
+                        </div>
+<!--                        <div class="form-group basicsetup_title">-->
+<!--                            <label class="col-md-2 control-label"><em style="color: red">*</em>是否同区包邮：</label>-->
+<!--                            <div class="col-md-6" id="State">-->
+<!--                                <label style="display: flex;align-items: center;">-->
+<!--                                    <input type="radio" name="state" value="0" checked="checked">-->
+<!--                                    <span>是</span>-->
+<!--                                </label>-->
+<!--                                <label class="checkbox-inline" style="display: flex;align-items: center;">-->
+<!--                                    <input type="radio" name="state" value="1">-->
+<!--                                    <span>否</span>-->
+<!--                                </label>-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="isshow">
+                            <div class="form-group basicsetup_title">
+                                <label class="col-md-2  control-label"><em style="color: red">*</em>计价方式：</label>
+                                <div class="col-md-8">
+                                    <div class="icheck">
+                                        <div class="icheck_phone">
+                                            <div class="checked" style="position: relative; top:5px;">
+                                                <input type="radio" name="Valuation"  class="stuCheckBox check-box loginKind"
+                                                       id="onpercentage" value="4" checked/>
+                                            </div>
+                                            <span>按百分比</span>
+                                        </div>
+                                        <div class="icheck_phone" style="margin-left: 8px">
+                                            <div class="checked" style="position: relative; top:5px;">
+                                                <input type="radio" name="Valuation" class="stuCheckBox check-box loginKind"
+                                                       id="onFixedFreight" value="5"/>
+                                            </div>
+                                            <span>按固定运费</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group basicsetup_title_next">
+                                <label class="col-md-2 control-label" style="height: 34px;line-height: 34px"><em style="color: red">*</em>默认运费：</label>
+                                <div class="col-md-10" style="padding: 0 0">
+                                    <div id="PercentageBox" style="">
+                                        <div style="" class="form-inline">
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label>商品金额≤</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" style="width: 70px" class="form-control num_other" id="one_num1" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label>元收总金额的</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" style="width: 70px" class="form-control num_other" id="one_num2" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>&nbsp;&nbsp;%&nbsp;&nbsp;</label>
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 20px" class="form-inline">
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label>商品金额&nbsp;:</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" style="width: 70px" class="form-control num_other" id="one_num3" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label> &nbsp;&nbsp;-&nbsp;&nbsp; </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" style="width: 70px" class="form-control num_other" id="one_num4" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label> 收 </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" style="width: 70px" class="form-control num_other" id="one_num5" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label> %</label>
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 20px" class="form-inline">
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label>商品金额&nbsp;:</label>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="number" style="width: 70px" class="form-control num_other" id="one_num6" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                                <label> 元及以上免运费。</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="display: none" class="form-inline" id="freightBox" >
+                                        <div class="form-group" style="margin-right: 15px">
+                                            <label ></label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="number" style="width: 70px" class="form-control num_other" id="two_num1" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="margin-left: 15px;margin-right: 15px">
+                                            <label >元以下收</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="number" style="width: 70px" class="form-control num_other" id="two_num2" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label >&nbsp;&nbsp;元，满&nbsp;&nbsp;</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="number" style="width: 70px" class="form-control num_other" id="two_num3" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label >元免运费。</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group basicsetup_title">
+                            <label class="col-md-2 control-label"><em style="color: red">*</em>状态：</label>
+                            <div class="col-md-6" id="Status">
+                                <label style="display: flex;align-items: center;">
+                                    <input type="radio" name="status" value="1" checked="checked">
+                                    <span>开启</span>
+                                </label>
+                                <label class="checkbox-inline" style="display: flex;align-items: center;">
+                                    <input type="radio" name="status" value="0">
+                                    <span>关闭</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="添加" id="submitBtn" class="btn btn-primary">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+{{block 'footer'}}
+{{/block}}
+{{block 'requirejs'}}
+<script src="/public/js/addFreightTemplate.js" type="text/babel"></script>
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/plugins/iCheck/icheck.min.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+{{/block}}

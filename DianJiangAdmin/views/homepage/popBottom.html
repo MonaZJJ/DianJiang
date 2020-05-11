@@ -1,0 +1,166 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}顶部广告设置{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/classifyList.css">
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/productRelease.css">
+<link rel="stylesheet" href="/public/css/storeAdd.css">
+<link rel="stylesheet" href="/public/css/limitSaleAdd.css">
+<link rel="stylesheet" href="/public/plugins/viewer/viewer.min.css">
+<link type="text/css" rel="stylesheet"
+      href="/public/plugins/ueditor/themes/default/css/ueditor.css">
+
+{{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box" style="padding-top: 30px">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="javascript:void(0);">顶部广告设置</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content edit-content" style="margin-top: 40px">
+                    <div class="tab-pane active" id="first">
+                        <div style="margin-bottom: 50px">
+                            <ul>
+                                <li>
+                                    <div class="box box-solid">
+
+                                        <div class="box-body" style="margin-bottom: 50px">
+                                            <div class="form-box form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>链接类型：</label>
+                                                    <div class="col-md-3">
+                                                        <select class="form-control" id="type" style="width: 180px">
+                                                            <option value="0">请选择</option>
+                                                            <option value="1">商品</option>
+                                                            <option value="2">分类</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <!--选择商品的时候出现-->
+                                                <div class="form-group" id="productBox" style="display: none">
+                                                    <label class="col-md-2 control-label"><em
+                                                            style="color: red;font-size: 15px">*</em>商品名称：</label>
+                                                    <div class="col-md-8">
+                                                        <a data-toggle="modal" href="#choicePresentModal"
+                                                           class="btn btn-default">选择商品</a>
+                                                        <span class="goods-name_final" data-id="0"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="display: none" id="performanceBox">
+                                                    <label class="col-md-2 control-label"><span
+                                                            class="red-star">*</span>商品分类：</label>
+                                                    <div class="col-md-2">
+                                                        <input type='button' value='选择分类'
+                                                               class="btn btn-default uploadBtn" id="selectClassify"/>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <p class="classifyName" data-id="0" id="classifyName"></p>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-bottom: 50px">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>广告图</label>
+                                                    <div class="col-md-9">
+                                                        <div id="dowebok" style="float: left">
+                                                            <div class="icon-box_about_classify">
+                                                                <div class="small_con">
+                                                                    <img src="/public/images/addImg.png" alt=""
+                                                                         id="small_icon"
+                                                                         style="width: 100px;height: 100px">
+                                                                    <input class="img-input1" type="file" id="listImgBtn"
+                                                                           style="cursor: pointer">
+                                                                </div>
+                                                                <div style="width: 200px;margin-top: 10px">建议尺寸：710*200
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-btn">
+                            <button class="btn btn-primary" id="nextStep">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--选择商品模态框-->
+<div class="modal fade" id="choicePresentModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="width:980px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">选择商品</h4>
+            </div>
+            <div class="modal-body" style="margin:auto">
+                <div class="row form-group search_goods_box">
+                    <label for="" style="width:80px;text-align: right">商品名称：</label>
+                    <input type="text" class="form-control" id="choice_presentName"
+                           style="width:200px;display: inline-block;text-align:left;border-radius: 4px ">
+                    <button class="btn btn-primary" id="prosearchBtn" style="margin-left: 20px">查询</button>
+                </div>
+                <div class="row form-group">
+                    <div class="box_choice_goods">
+                        <table id="choice_goods_tb">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="edit_Department_confirm">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--选择商品模态框end-->
+<div class="mask">
+    <div class="content-box">
+        <h2>选择商品分类</h2>
+        <a class="close">×</a>
+        <div class="coup-content">
+            <div id="table_header_classify">
+                <div class="col-xs-3">
+                    编号
+                </div>
+                <div class="col-xs-6">
+                    分类名称
+                </div>
+                <div class="col-xs-3">
+                    操作
+                </div>
+            </div>
+            <div id="table_content_classify">
+
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/js/uploadImg.js"></script>
+<script src="/public/plugins/laydate/moment.js"></script>
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<script src="/public/plugins/viewer/viewer.min.js"></script>
+<script src="/public/js/popBottom.js" type="text/babel"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/plugins/ueditor/ueditor.config.js"></script>
+<script src="/public/plugins/ueditor/ueditor.all.js"></script>
+{{/block}}

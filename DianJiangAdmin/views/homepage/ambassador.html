@@ -1,0 +1,83 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}形象大使规则设置{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/classifyList.css">
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/productRelease.css">
+<link rel="stylesheet" href="/public/css/storeAdd.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box" style="padding-top: 30px">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li  class="active">
+                            <a data-type="1" href="javascript:void(0);" class="listBtn">形象大使规则设置</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content edit-content" style="margin-top: 40px">
+                    <div class="tab-pane active" id="first">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="box box-solid">
+                                        <div class="box-header" style="margin-bottom: 30px">
+                                            <h3 class="box-title">
+                                                形象大使规则设置
+                                            </h3>
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-sm pull-right btn-primary operate-btn" data-widget="collapse" data-toggle="tooltip"
+                                                        title="Collapse">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="box-body form-horizontal" >
+                                            <!--<div class="form-group">-->
+                                                <!--<label class="col-sm-2 control-label"><span class="red-star">*</span>充值金额：</label>-->
+                                                <!--<div class="col-md-5">-->
+                                                    <!--<input type="number" placeholder="请输入充值金额" class="form-control" id="money">-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><span class="red-star">*</span>标题：</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" placeholder="请输入标题" class="form-control" id="Title">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label"><span class="red-star">*</span>简介：</label>
+                                                <div class="col-md-5">
+                                                    <input type="text" placeholder="请输入简介" class="form-control" id="Summary">
+                                                </div>
+                                            </div>
+                                            <div class="form-box">
+                                                <div class="form-group" style="margin-bottom: 10px">
+                                                    <label class="col-sm-2 control-label"><span class="red-star">*</span>规则：</label>
+                                                    <div class="col-md-6" style="padding-left: 0">
+                                                        <textarea name="rule" placeholder="请输入规则,每一点用换行隔开" class="form-control" id="rule" style="width: 500px;height: 200px;resize:none" ></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-btn">
+                            <button class="btn btn-primary" id="nextStep">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/js/ambassador.js" type="text/babel"></script>
+{{/block}}

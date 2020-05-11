@@ -1,0 +1,233 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}积分设置{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/typeList.css">
+<link rel="stylesheet" href="/public/css/member_detailInfo.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-type="1" href="javascript:void(0);">积分设置</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box box-solid" style="margin-top: 60px">
+                    <div class="row" style="border-bottom: 1px solid #E5E5E5;padding: 10px 0;margin-bottom: 40px">
+                        <div class="col-sm-6">
+                            <div class="r_title">
+                                <h3>
+                                    <span style="float: left">任务积分</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="r_title_r">
+                                <a class="img_toggle" href="javascript:void(0)">
+                                    <img src="/public/images/icon_fold_1.png" class="icon_fold"
+                                         style="display: inline;">
+                                    <img src="/public/images/icon_down_1.png" class="icon_down"
+                                         style="display: none;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="chart_1">
+                            <div class=" form-inline clearfix">
+                                <div class="row" style="margin-bottom: 20px">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">完善您的收货地址</label>
+                                        <input type="text" class="form-control" id="address"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">完善您的个人信息</label>
+                                        <input type="text" class="form-control" id="personal"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="box box-solid">
+                    <div class="row" style="border-bottom: 1px solid #E5E5E5;padding: 10px 0;margin-bottom: 40px">
+                        <div class="col-sm-6">
+                            <div class="r_title">
+                                <h3>
+                                    <span style="float: left">签到积分</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="r_title_r">
+                                <a class="img_toggle" href="javascript:void(0)">
+                                    <img src="/public/images/icon_fold_1.png" class="icon_fold"
+                                         style="display: inline;">
+                                    <img src="/public/images/icon_down_1.png" class="icon_down"
+                                         style="display: none;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 37px">
+                        <div class="chart_1">
+                            <div class=" form-inline clearfix " style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到1天</label>
+                                        <input type="text" class="form-control" id="one"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到2天</label>
+                                        <input type="text" class="form-control" id="two"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到3天</label>
+                                        <input type="text" class="form-control" id="three"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到4天</label>
+                                        <input type="text" class="form-control" id="four"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到5天</label>
+                                        <input type="text" class="form-control" id="five"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到6天</label>
+                                        <input type="text" class="form-control" id="six"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">连续签到7天</label>
+                                        <input type="text" class="form-control" id="serven"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box box-solid">
+                    <div class="row" style="border-bottom: 1px solid #E5E5E5;padding: 10px 0;margin-bottom: 70px">
+                        <div class="col-sm-6">
+                            <div class="r_title">
+                                <h3>
+                                    <span style="float: left">其他积分</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="r_title_r">
+                                <a class="img_toggle" href="javascript:void(0)">
+                                    <img src="/public/images/icon_fold_1.png" class="icon_fold"
+                                         style="display: inline;">
+                                    <img src="/public/images/icon_down_1.png" class="icon_down"
+                                         style="display: none;">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left: 37px">
+                        <div class="chart_1">
+                            <div class="form-inline clearfix " style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 20px">新用户注册</label>
+                                        <input type="text" class="form-control" id="new"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="margin-right: 27px">购物满1元</label>
+                                        <input type="text" class="form-control" id="money"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" form-inline clearfix" style="margin-bottom: 20px">
+                                <div class="form-box form-horizontal">
+                                    <div class="form-group" class="col-lg-3">
+                                        <label style="position: relative;right: 33px">分享好友注册成功</label>
+                                        <input type="text" style="position: relative;right: 22px" class="form-control"
+                                               id="share"
+                                               placeholder="请输入积分数">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="footer-btn">
+                    <button class="btn btn-primary"
+                            style="width:77px;background:rgba(25,137,250,1);border-radius:100px;margin-left: 300px"
+                            id="finish">提交
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+
+{{block 'footer'}}
+
+{{/block}}
+
+{{block 'requirejs'}}
+<script src="/public/js/integralSet.js" type="text/babel"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+{{/block}}

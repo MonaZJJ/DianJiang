@@ -1,0 +1,214 @@
+/*上传图标样式*/
+
+.small_con {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px
+}
+
+#small_upload_pick {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0px;
+    top: 0px;
+}
+
+#small_upload_pick div,
+#small_upload_pick input {
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#small_upload_pick label {
+    display: none;
+}
+
+.selectContent {
+    width: 224px;
+    height: 40px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    border: 1px solid rgba(216, 220, 230, 1);
+}
+
+.cancelBtn {
+    width: 77px;
+    background: #fff;
+    border-radius: 100px;
+    border: 1px solid rgba(220, 223, 230, 1);
+    margin-right: 20px;
+    /*margin-left: 450px;*/
+    color: #5A5E66;
+}
+
+.cancelBtn:hover {
+    color: #5A5E66;
+    width: 77px;
+    background: #fff;
+    border-radius: 100px;
+    border: 1px solid rgba(220, 223, 230, 1);
+}
+
+.submitBtn {
+    width: 77px;
+    background: #1989FA;
+    border-radius: 100px;
+    border: 1px solid rgba(220, 223, 230, 1);
+}
+
+.AddBtn {
+    width: 77px;
+    background: #1989FA;
+    border-radius: 100px;
+    border: 1px solid rgba(220, 223, 230, 1);
+    margin-left: 500px;
+}
+
+.textBox {
+    width: 471px;
+    height: 199px;
+    border-radius: 5px;
+    border: 1px solid rgba(216, 220, 230, 1);
+}
+
+.title {
+    width: 224px;
+    height: 40px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    border: 1px solid rgba(216, 220, 230, 1);
+    padding-left: 10px;
+}
+
+.textModal {
+    width: 322px;
+    height: 158px;
+    border-radius: 5px;
+    border: 1px solid rgba(216, 220, 230, 1);
+}
+
+.option-list {
+    border-bottom: 1px solid #c5c5c5;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.option-list>.form-group {
+    margin-top: 20px;
+}
+
+.blueBtn {
+    padding: 6px 24px;
+    margin: 0px 20px 0px 50px;
+}
+
+.greyBtn {
+    padding: 6px 24px;
+    background-color: #fff;
+    color: #606266;
+    border: 1px solid #d2d6de;
+}
+
+.greyBtn:hover {
+    background-color: #fff;
+    color: #606266;
+    border: 1px solid #d2d6de;
+}
+
+.addBtn {
+    padding: 6px 24px;
+    margin-left: 10px;
+}
+
+.discount {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(216, 220, 230, 1);
+    padding-left: 15px;
+}
+
+
+/*引导图*/
+
+#guide_small_upload_pick {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    left: 0px;
+    top: 0px;
+}
+
+#guide_small_upload_pick div,
+#guide_small_upload_pick input {
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#guide_small_upload_pick label {
+    display: none;
+}
+
+#finishBtn {
+    margin-top: 50px;
+    margin-left: 30%;
+}
+
+.order-disp {
+    display: inline-block;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+    line-height: 35px;
+    border-radius: 5px;
+    width: 50px;
+    text-align: center;
+    min-height: 38px;
+}
+
+.labelBox li {
+    /*float: left;*/
+    width: 500px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 0;
+    border-radius: 5px;
+    border: 1px solid rgba(237, 237, 237, 1);
+    margin-right: 10px;
+    padding-right: 4px;
+    margin-bottom: 20px;
+}
+
+.labelBox li input {
+    width: 480px;
+    height: 30px;
+    border: 0;
+    margin-left: 15px;
+    font-size: 16px;
+    outline: none;
+    margin-top: 3px;
+    /*float: left;*/
+}
+
+.labelBox li span {
+    display: inline-block;
+    height: 39px;
+    margin: 0 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.labelBox li span.confirm {
+    color: #14AC45;
+    float: left;
+}
+
+.labelBox li span.cancel {
+    color: #CDCDCD;
+    float: right;
+}

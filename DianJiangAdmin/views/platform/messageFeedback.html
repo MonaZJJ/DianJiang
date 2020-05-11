@@ -1,0 +1,109 @@
+{{extend '../share/layout.html'}}
+{{block 'title'}}留言反馈{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/statisticsDistribution.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="javascript:void(0);">留言反馈</a>
+                        </li>
+                    </ul>
+                </div>
+<!--                <div class="option-list form-inline clearfix">-->
+<!--                    <div class="form-group col-lg-3 col-md-6">-->
+<!--                        <label>会员昵称：</label>-->
+<!--                        <input type="text" class="form-control" id="Name">-->
+<!--                    </div>-->
+<!--                    <div class="form-group col-lg-3 col-md-6">-->
+<!--                        <label>手机号码：</label>-->
+<!--                        <input type="number" class="form-control" id="Phone">-->
+<!--                    </div>-->
+<!--                    <div class="form-group col-lg-3 col-md-6">-->
+<!--                        <a class="btn btn-primary" id="search" style="width: 79px;background: #424242;">查询</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="bootstrap-table">
+                    <table id="msgTable" class="table table-striped table-hover">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--详情模态框-->
+<!--    <div class="modal fade " id="seeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">-->
+<!--        <div class="modal-dialog" role="document">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>-->
+<!--                    </button>-->
+<!--                    <h4 class="modal-title" id="myModalLabel">详情</h4>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <div class="form-box form-horizontal">-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-md-3 control-label">会员昵称：</label>-->
+<!--                            <div class="col-md-4">-->
+<!--                                <input type="text" class="form-control" id="" readonly>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-md-3 control-label">手机号码：</label>-->
+<!--                            <div class="col-md-4">-->
+<!--                                <input type="text" class="form-control" id="" readonly>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-md-3 control-label">留言标题：</label>-->
+<!--                            <div class="col-md-4">-->
+<!--                                <input type="text" class="form-control" id="" readonly>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-md-3 control-label">留言内容：</label>-->
+<!--                            <div class="col-md-4">-->
+<!--                                <input type="text" class="form-control" id="" readonly>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-md-3 control-label">图片列表：</label>-->
+<!--                            <div class="col-md-8">-->
+
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label class="col-md-3 control-label">记录时间：</label>-->
+<!--                            <div class="col-md-4">-->
+<!--                                <input type="text" class="form-control" id="" readonly>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-primary" data-dismiss="modal">确认</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!--详情模态框end-->
+
+
+</section>
+{{/block}}
+{{block 'footer'}}
+{{/block}}
+{{block 'requirejs'}}
+<script src="/public/js/feedbackList.js" type="text/babel"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+{{/block}}

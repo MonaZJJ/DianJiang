@@ -1,0 +1,60 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}商品风格添加{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/classifyAdd.css">
+<link rel="stylesheet" href="/public/plugins/jquery-chosen/chosen.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li>
+                            <a data-type="1" href="/product/styleList">管理</a>
+                        </li>
+                        <li class="active">
+                            <a data-type="2" href="/product/styleAdd">添加</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="classify_add_box">
+                    <div class="row form-group">
+                        <label for="classify_name" style="position: relative;top: 7px" class="col-md-3 text-right"> <em
+                                style="color: red;">*</em>风格名称：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="classify_name" style="width: 230px" placeholder="请输入风格名称">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="classify_name" style="position: relative;top: 7px" class="col-md-3 text-right"> <em
+                                style="color: red;">*</em>排序：</label>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="displayOrder" style="width: 230px" placeholder="请输入排序">
+                        </div>
+                    </div>
+                    <div class="row form-group" style="margin-top: 30px;">
+                        <div class="col-md-3" style="text-align: right">
+                            <button class="btn btn-primary finish_bth_add">完成</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+
+{{block 'footer'}}
+
+{{/block}}
+
+{{block 'requirejs'}}
+ <script src="/public/plugins/jquery-chosen/chosen.jquery.js"></script>
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<script src="/public/js/styleAdd.js" type="text/babel"></script>
+{{/block}}

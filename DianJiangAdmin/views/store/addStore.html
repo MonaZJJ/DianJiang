@@ -1,0 +1,199 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}添加门店{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/classifyList.css">
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/productRelease.css">
+<link rel="stylesheet" href="/public/css/storeAdd.css">
+<link rel="stylesheet" href="/public/css/create_h5_Fullscreen_tpl.css">
+<link rel="stylesheet" href="/public/css/create_h5_text_tpl.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="/public/plugins/viewer/viewer.min.css"> {{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box" style="padding-top: 30px">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a>添加</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content edit-content" style="margin-top: 40px">
+                    <div class="tab-pane active" id="first">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="box box-solid">
+                                        <div class="box-header">
+                                            <h3 class="box-title">
+                                                门店基本信息
+                                            </h3>
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-sm pull-right btn-primary operate-btn" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="box-body">
+                                            <div class="form-box form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label"><span class="red-star">*</span>门店头像：</label>
+                                                    <div class="col-md-9">
+                                                        <div class="icon-box_about_classify">
+                                                            <div class="small_con">
+                                                                <img src="/public/images/addImg.png" alt="" id="small_icon" style="width: 100px;height: 100px;">
+                                                                <div id="small_upload_pick" class="webuploader-container">
+                                                                    <div class="webuploader-pick"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>门店名称：</label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control" id="storeName" placeholder="请输入名称">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>门店密码：</label>
+                                                    <div class="col-md-4">
+                                                        <input type="password" placeholder="请输入密码" class="form-control" id="pwd">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>门店联系人名称：</label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control" id="storeUserName" placeholder="请输入联系人名称">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>门店电话：</label>
+                                                    <div class="col-md-4">
+                                                        <input type="text" class="form-control" id="phone" placeholder="请输入电话">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label"><span
+                                                            class="red-star">*</span>门店地址：</label>
+                                                    <div class="col-md-10">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <select class="form-control" id="province_box">
+                                                                    <option selected="selected" value="0">请选择省</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <select class="form-control" id="city_box">
+                                                                    <option selected="selected" value="0">请选择市</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <select class="form-control" id="area_box">
+                                                                    <option selected="selected" value="0">请选择区/县
+                                                                    </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row" style="margin-top:20px">
+                                                            <div class="col-md-9">
+                                                                <input type="text" class="form-control" id="detailAddress" placeholder="请输入详细地址">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">定位：</label>
+                                                    <div class="col-md-9" id="Map" style="width: 485px;height: 230px;">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box box-solid">
+                                        <div class="box-header">
+                                            <h3 class="box-title">
+                                                店长设置
+                                            </h3>
+                                            <div class="pull-right">
+                                                <button type="button" class="btn btn-sm pull-right btn-primary operate-btn" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="box-body">
+                                            <div class="form-group">
+                                                <label class="col-md-2 control-label" style="height: 34px;line-height: 34px">请选择店长：</label>
+                                                <div class="col-md-2">
+                                                    <input type='button' value='选择店长' class="btn btn-default uploadBtn" id="selectClassify" />
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <p class="managerName" data-id="0" style="margin-bottom: 0;position: relative;top: 5px;" id="managerName"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-btn">
+                            <button class="btn btn-primary" id="nextStep">保存</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mask">
+        <div class="content-box">
+            <h2>选择店长</h2>
+            <a class="close">×</a>
+            <div class="coup-content">
+                <div id="table_header_classify">
+                    <div class="form-group" style="width: 100%">
+                        <div class=" col-md-6">
+                            <div class="col-md-4" style="height: 34px;line-height: 34px">
+                                <label>店长名称：</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input id="Name" type="text" class="form-control" style="width: 100%">
+                            </div>
+
+                        </div>
+                        <div class=" col-md-4">
+                            <div class="col-md-8">
+                                <a class="btn btn-primary pull-right" id="searchBtn" style="margin-right: 15px">查询</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <table id="table_content_classify">
+
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/plugins/viewer/viewer.min.js"></script>
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=LHXBZ-UMJ34-NLDUU-DST77-OADBQ-KYFJY"></script>
+<script src="/public/js/uploadProductImg.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<script src="/public/js/addStore.js" type="text/babel"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+{{/block}}

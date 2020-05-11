@@ -1,0 +1,32 @@
+.btn_pre_c {
+    width: 28px;
+    height: 25px;
+    background: url(../images/next_c.png);
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn_next_c {
+    width: 28px;
+    height: 25px;
+    background: url(../images/pre_c.png);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon_close {
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon_close.png);
+    display: inline-block;
+    cursor: pointer;
+}
+
+#fieldAddTable tr th {
+    text-align: center !important;
+}
+
+#fieldAddTable tr td {
+    text-align: center !important;
+}

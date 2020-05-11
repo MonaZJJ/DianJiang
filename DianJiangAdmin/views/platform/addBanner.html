@@ -1,0 +1,102 @@
+{{extend '../share/layout.html'}}
+{{block 'title'}}添加轮播图{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/addAdvert.css">
+<link rel="stylesheet" href="/public/plugins/iCheck/all.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li>
+                            <a data-type="1" href="/platform/bannerList">轮播图列表</a>
+                        </li>
+                        <li class="active">
+                            <a href="javascript:void(0);">添加</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-box form-horizontal" style="margin-top: 40px;">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="red-star">*</span>标题：</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="Title" placeholder="请输入名称">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="red-star">*</span>状态：</label>
+                        <div class="col-md-9">
+                            <div style="padding-top: 10px;display: inline-block;margin-right: 15px;">
+                                <input type="radio" name="States" class="open" checked/>
+                                <span>开启</span>
+                            </div>
+                            <div style="padding-top: 10px;display: inline-block;">
+                                <input type="radio" name="States" class="close"/>
+                                <span>关闭</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="red-star">*</span>图片：</label>
+                        <div class="col-md-9">
+                            <div class="icon-box_about_classify">
+                                <div class="small_con">
+                                    <img src="/public/images/addImg.png" alt="" id="small_icon"
+                                         style="width: 100px;height: 100px;">
+                                    <div id="small_upload_pick" class="webuploader-container">
+                                        <div class="webuploader-pick"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label"><span class="red-star">*</span>跳转类型：</label>
+                        <div class="col-md-4">
+                            <select class="form-control" id="type">
+                                <option value="0" selected>无跳转</option>
+                                <option value="1">普通商品</option>
+                                <option value="2">积分商品</option>
+                                <option value="3">商品分类</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group objectDiv" style="display: none;">
+                        <label class="col-md-2 control-label"><span class="red-star">*</span>跳转对象：</label>
+                        <div class="col-md-4">
+                            <select class="form-control" id="objectType">
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">
+                            <span class="red-star">*</span>排序：</label>
+                        <div class="col-md-10">
+                            <input type="number" class="form-control" id="DisplayOrder" style="width: 120px">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                            <button class="btn btn-primary cancelBtn" id="cancelBtn">取消</button>
+                            <button class="btn btn-primary submitBtn" id="submitBtn">提交</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+{{block 'footer'}}
+{{/block}}
+{{block 'requirejs'}}
+<script src="/public/plugins/iCheck/icheck.min.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/js/addBanner.js"></script>
+{{/block}}

@@ -1,0 +1,96 @@
+.equ_top{
+    text-align: center;
+    border-bottom: 1px solid rgba(151,151,151,1);
+    padding-bottom:30px;
+}
+.equ_top img{
+    display: inline-block;
+    vertical-align: top;
+}
+.equ_top>div.form-group{
+    margin-top: 30px;
+}
+.equ_top>div.form-group:not(:last-child){
+    border-right:1px solid rgba(226,226,226,1);
+}
+.equTop_box{
+    display: inline-block;
+    font-size: 16px;
+    color: #666666;
+    margin-left: 20px;
+    text-align: left;
+}
+.equTop_box>p:first-child{
+    font-size: 26px;
+    color: #3F3F3F;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.equ_mid{
+    font-size: 14px;
+    color:#666666;
+    line-height: 58px;
+    /*text-align: center;*/
+    margin: 20px 0 50px 0;
+}
+.equ_mid span:last-child{
+    font-size: 20px;
+    color: #3F3F3F;
+    margin-left: 95px;
+}
+
+.export{
+    display: inline-block;
+    color: #3C8CBC;
+    margin-left: 40px;
+    cursor: pointer;
+}
+#search{
+    cursor: pointer;
+}
+.r_title{
+    line-height: 35px;
+}
+.r_title_r{
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.r_title_r .input-group{
+    width: 210px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.input-group .input-group-addon{
+    border-radius: 5px 0 0 5px ;
+}
+.input-group .form-control{
+    border-radius: 0 5px 5px 0;
+}
+
+.numberBox{
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.numberBox>div.form-group{
+    padding: 35px 0 15px 0;
+}
+.numberBox>div>p:first-child{
+    color: #000;
+    font-size: 24px;
+    margin: 0;
+    font-weight:500;
+}
+
+.icon_fold,.icon_down{
+    width: 24px;
+    height: 24px;
+}
+
+.r_title_r select{
+    border-radius: 5px;
+    margin-right: 20px;
+}

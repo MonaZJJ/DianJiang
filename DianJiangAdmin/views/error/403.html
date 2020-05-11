@@ -1,0 +1,28 @@
+<!--403.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}403{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/index.css">
+{{/block}}
+
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <!-- 总容器box -->
+            <div Id="indexBox" style="margin: 0 auto;margin-top: 200px;text-align: center;">
+                <h1>无权限</h1>
+                <p style="font-size: 24px;margin:30px 0px;">您暂时没有权限访问该页面，建议您检查一下再试</p>
+                <a  href="javascript:history.go(-2)" type="button" class="btn btn-warning btn-lg">返回上一页</a>
+            </div>
+            <!-- 总容器box end -->
+        </div>
+    </div>
+</section>
+{{/block}}
+
+{{block 'footer'}}
+{{/block}}
+
+{{block 'requirejs'}}
+{{/block}}

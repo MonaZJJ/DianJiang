@@ -1,0 +1,79 @@
+.content {
+    background-color: #ffffff;
+    padding-top: 30px;
+    margin-left: 20px;
+}
+.option-list .form-group {
+    margin-top: 20px;
+}
+.operate-box {
+    padding: 30px 0 20px 0;
+}
+.option-list {
+    padding-top: 22px;
+    padding-bottom: 33px;
+    border-bottom: 1px solid #c5c5c5;
+}
+.checkall{
+    border: 0;
+    margin-right: 0;
+}
+#stuCheckBox{
+    width:20px;
+    height:20px;
+    border:1px solid #979797;
+    margin: 0;
+}
+.black-color{
+    background: #424242;
+    border-color: #424242;
+}
+.btn-primary.black-color{
+    margin-left: 13px;
+}
+.pull-left.black-color{
+    margin-left: 25px;
+}
+#memberTable td{
+    padding: 20px 0;
+}
+
+#delete{
+    margin-left: 20px;
+}
+
+.status_examine{
+    cursor: pointer;
+    color: #4E70FB;
+}
+
+
+/*运营商*/
+.close{
+    width: 25px;
+    height: 25px;
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.modal label{
+    color: #999;
+    font-weight: normal;
+}
+.modal .modal-body{
+    padding: 83px 0 60px 0;
+}
+#Status label{
+    height: 34px;
+    line-height: 34px;
+    width: 60px;
+}
+#Status .iradio_square-blue {
+    height: 20px;
+    width: 20px;
+}
+#confirmBtn,#addConfirmBtn,#editConfirmBtn{
+    background: #6A9BE4;
+    border-color: #6A9BE4;
+}

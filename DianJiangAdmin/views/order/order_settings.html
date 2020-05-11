@@ -1,0 +1,111 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}订单设置{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/order_settings.css"> {{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="order_settings">
+                <div class="settings">
+                    <span class="settings_text">自动化设置</span>
+                </div>
+                <div class="order_text">
+                    <!--<div class="order_title">-->
+                        <!--<em>*</em>-->
+                        <!--<span>限时抢购订单超过</span>-->
+                        <!--<div class="order_input">-->
+                            <!--<input type="text" id="orderTime" value="40">-->
+                            <!--<span>分钟</span>-->
+                        <!--</div>-->
+                        <!--<p>未付款，订单自动关闭</p>-->
+                    <!--</div>-->
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>下单后超过</span>
+                        <div class="order_input" style="width: 250px">
+                            <input type="text" id="orderDay">
+                            <span style="width: 50px">分钟</span>
+                        </div>
+                        <p>未付款，订单自动关闭</p>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>发货超过</span>
+                        <div class="order_input">
+                            <input type="text" id="sendDay">
+                            <span>天</span>
+                        </div>
+                        <p>未确认收货，订单自动完成</p>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>订单完成超过</span>
+                        <div class="order_input">
+                            <input type="text" id="finishDay">
+                            <span>天</span>
+                        </div>
+                        <p>自动结束交易，不能申请售后</p>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>订单完成超过</span>
+                        <div class="order_input">
+                            <input type="text" id="finishEvaluate">
+                            <span>天</span>
+                        </div>
+                        <p>自动评价</p>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>下单所得积分</span>
+                        <div class="order_input">
+                            <input type="text" id="orderAmount">
+                            <span>%</span>
+                        </div>
+                        <p>为消费金额的</p>
+                    </div>
+                    <!--<div class="order_title">-->
+                        <!--<em>*</em>-->
+                        <!--<span>订单完成赠送</span>-->
+                        <!--<div class="order_input" style="width: 250px">-->
+                            <!--<input type="text" id="PresentationPoints">-->
+                            <!--<span style="width: 50px">积分</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>客户联系电话</span>
+                        <div class="order_input">
+                            <input type="text" style="width: 230px" id="CustomerPhone">
+                        </div>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>售后联系人员</span>
+                        <div class="order_input">
+                            <input type="text" style="width: 230px" id="Consignee">
+                        </div>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>售后联系电话</span>
+                        <div class="order_input">
+                            <input type="text" style="width: 230px" id="Mobile">
+                        </div>
+                    </div>
+                    <div class="order_title">
+                        <em>*</em>
+                        <span>售后联系地址</span>
+                        <div class="order_input">
+                            <input type="text" style="width: 230px" id="Address">
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-primary finish" style="width: 100px;background: #424242" id="submit">完成</a>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/js/orderSettings.js" type="text/babel"></script>
+{{/block}}

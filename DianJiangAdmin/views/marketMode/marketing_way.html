@@ -1,0 +1,334 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+
+{{block 'title'}}优惠券列表{{/block}}
+
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/productRelease.css">
+<link rel="stylesheet" href="/public/css/counp.css">
+<link rel="stylesheet" href="/public/css/marketing_way.css">
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="/public/plugins/iCheck/flat/_all.css">
+<link rel="stylesheet" href="/public/css/setting_field.css">
+
+{{/block}}
+
+{{block 'content'}}
+
+<section class="content-header">
+</section>
+<section>
+    <div class="" style="margin-top: 30px;">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-type="0" data-toggle="tab" href="#first">优惠券列表</a>
+            </li>
+        </ul>
+    </div>
+    <div class="choice_coupon_box ">
+        <div class="container-fluid form-horizontal"
+             style="margin-left:15px;margin-right:15px;padding-right:0px;border-bottom: 1px solid #ddd;">
+            <div class="row" style="margin-bottom: 20px">
+                <div class="option-list form-inline clearfix">
+                    <div class="form-group col-lg-4">
+                        <label for="coupon_name">优惠券名称：</label>
+                        <input type="text" class="form-control" id="coupon_name" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px">
+                <div class="option-list form-inline clearfix">
+                    <div class="form-group col-lg-4 col-sm-6">
+                        <button id="search" style="width: 79px;background: #0486FE;color: #fff;margin-right: 20px" class="btn">
+                            提交
+                        </button>
+                        <button id="resetBtn" style="width: 79px;background: #fff;border-radius:4px;border:1px solid rgba(220,223,230,1);box-sizing: border-box" class="btn">
+                            重置
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="content container-fluid" style="padding-left: 0">
+    <div class="main_list_content" style="padding-left: 0">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="addBtnClick" data-toggle="modal" data-target="#coupon_add_modal">+ 新增</div>
+        </div>
+        <div id="coupon_list_box">
+
+            <table id="tb_coupon_list">
+
+            </table>
+
+
+        </div>
+
+    </div>
+</section>
+
+<!-- 添加优惠券弹窗 start-->
+<div class="modal fade in" id="coupon_add_modal" style="display: none; padding-right: 17px;" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">优惠券添加</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box_div_coupon">
+                    <div class="form-group">
+                        <label for="coupon_name_add" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>优惠券名称：
+                        </label>
+                        <input type="text" class="form-control" id="coupon_name_add" style="width: 224px"
+                               placeholder="必填，在1到20个字符">
+                    </div>
+                    <div class="form-group">
+                        <label for="coupon_name_add" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>优惠券描述：
+                        </label>
+                        <textarea type="text" class="form-control" id="coupon_desc_add" style="width: 224px"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="denomination" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>面值：
+                        </label>
+                        <div class="input-group" style="width: 224px">
+                            <div class="input-group-addon">¥</div>
+                            <input type="number" class="form-control" id="denomination" placeholder="请输入数值" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="denomination" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>发放总量：
+                        </label>
+                        <input type="number" class="form-control" style="width: 224px" id="TotalAmount"
+                               placeholder="请输入张数">
+                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label for="" style="width:100px;text-align: right;">-->
+                            <!--<span style="color:#f00;margin-right:5px;">*</span>每人限领：-->
+                        <!--</label>-->
+                        <!--<input type="number" class="form-control" style="width: 224px" id="GetModel"-->
+                               <!--placeholder="请输入张数">-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label for="" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>订单金额：
+                        </label>
+                        <div class="input-group" style="width: 224px">
+                            <div class="input-group-addon">¥</div>
+                            <input type="number" class="form-control" id="orderAmout" placeholder="请输入金额">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>有效期：
+                        </label>
+                        <div class="form-group">
+                            <input type="text" style="float:left" readonly class="form-control demo-input"
+                                   placeholder=""
+                                   id="start_time">
+                            <span style="float: left;margin-left: 6px;">
+                                    至
+                                    <input type="text" style="display:inline-block;width: auto;margin-left: 6px;"
+                                           readonly
+                                           class="form-control demo-input" placeholder="" id="end_time">
+                                </span>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>发放时间：
+                        </label>
+                        <div class="form-group">
+                            <input type="text" style="float:left" readonly class="form-control demo-input"
+                                   placeholder=""
+                                   id="sendStart_time_add">
+                            <span style="float: left;margin-left: 6px;">
+                                    至
+                                    <input type="text" style="display:inline-block;width: auto;margin-left: 6px;"
+                                           readonly
+                                           class="form-control demo-input" placeholder="" id="sendEnd_time_add">
+                                </span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="saveData">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 添加优惠券弹窗end -->
+
+
+<!-- 编辑优惠券弹窗 start-->
+<div class="modal fade in" id="coupon_edit_modal" style="display: none; padding-right: 17px;" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">优惠券编辑</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box_div_coupon">
+                    <div class="form-group">
+                        <label for="coupon_name_add" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>优惠券名称：
+                        </label>
+                        <input type="text" class="form-control" id="coupon_name_edit" style="width: 224px"
+                               placeholder="必填，在1到20个字符">
+                    </div>
+                    <div class="form-group">
+                        <label for="coupon_name_add" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>优惠券描述：
+                        </label>
+                        <textarea type="text" class="form-control" id="coupon_desc_edit" style="width: 224px"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="denomination" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>面值：
+                        </label>
+                        <div class="input-group" style="width: 224px">
+                            <div class="input-group-addon">¥</div>
+                            <input type="number" class="form-control" id="denominationEdit" placeholder="请输入数值" onkeyup="value=value.replace(/^(0+)|[^\d]+/g,'')">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="denomination" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>发放总量：
+                        </label>
+                        <input type="number" class="form-control" style="width: 224px" id="TotalAmountEdit"
+                               placeholder="请输入张数">
+                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label for="" style="width:100px;text-align: right;">-->
+                            <!--<span style="color:#f00;margin-right:5px;">*</span>每人限领：-->
+                        <!--</label>-->
+                        <!--<input type="number" class="form-control" style="width: 224px" id="GetModelEdit"-->
+                               <!--placeholder="请输入张数">-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label for="" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>订单金额：
+                        </label>
+                        <div class="input-group" style="width: 224px">
+                            <div class="input-group-addon">¥</div>
+                            <input type="number" class="form-control" id="orderAmoutEdit" placeholder="请输入金额">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>有效期：
+                        </label>
+                        <div class="form-group">
+                            <input type="text" style="float:left" readonly class="form-control demo-input"
+                                   placeholder=""
+                                   id="start_time_edit">
+                            <span style="float: left;margin-left: 6px;">
+                                    至
+                                    <input type="text" style="display:inline-block;width: auto;margin-left: 6px;"
+                                           readonly
+                                           class="form-control demo-input" placeholder="" id="end_time_edit">
+                                </span>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>发放时间：
+                        </label>
+                        <div class="form-group">
+                            <input type="text" style="float:left" readonly class="form-control demo-input"
+                                   placeholder=""
+                                   id="sendStart_time_edit">
+                            <span style="float: left;margin-left: 6px;">
+                                    至
+                                    <input type="text" style="display:inline-block;width: auto;margin-left: 6px;"
+                                           readonly
+                                           class="form-control demo-input" placeholder="" id="sendEnd_time_edit">
+                                </span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="editSaveData">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 编辑优惠券弹窗end -->
+
+
+<!--发放优惠券弹窗-->
+<div class="modal fade in" id="coupon_send_modal" style="display: none; padding-right: 17px;" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">发放优惠券</h4>
+            </div>
+            <div class="modal-body" style="height: 100px">
+                <div class="box_div_coupon">
+                    <div class="form-group">
+                        <label for="coupon_name_edit" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>用户选择：
+                        </label>
+                       <select class="selectUser" id="userName">
+                           <option value="0">请选择用户</option>
+                       </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="coupon_name_edit" style="width:100px;text-align: right;">
+                            <span style="color:#f00;margin-right:5px;">*</span>优惠券数量：
+                        </label>
+                        <text style="font-size:20px">1</text>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="sendData">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/block}}
+
+{{block 'footer'}}
+<aside class="control-sidebar control-sidebar-dark"></aside>
+{{/block}}
+
+{{block 'requirejs'}}
+<!-- bootstrp table分页插件 -->
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/js/upload_icon_counp.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/plugins/laydate/moment.js"></script>
+<script src="/public/plugins/iCheck/icheck.min.js"></script>
+<script src="/public/js/marketing_way.js" type="text/babel"></script>
+
+{{/block}}

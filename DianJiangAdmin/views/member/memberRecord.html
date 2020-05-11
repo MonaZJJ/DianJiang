@@ -1,0 +1,59 @@
+{{extend '../share/layout.html'}}
+{{block 'title'}}浏览记录{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/addAdvert.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="javascript:void(0);">浏览记录</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin: 20px 0px">
+                    <a class="backBtn">
+                        <img src="/public/images/back.png" alt="">
+                        <span>返回会员列表</span>
+                    </a>
+                </div>
+                <div class="all_data_operation_box">
+                    <div class="disp_page_box pull-right">
+                        <label style="float:left;line-height: 34px;margin-right: 4px;">每页显示数量：</label>
+                        <select id="pagesize_dropdown" class="orderTypeSelect select2 pull-right" tabindex="-1" aria-hidden="true">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="40">40</option>
+                            <option value="200">200</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="memberTableDiv">
+                    <table id="memberTable" class="table table-striped">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}}
+
+{{block 'footer'}}
+
+{{/block}}
+
+{{block 'requirejs'}}
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/js/memberRecord.js" type="text/babel"></script>
+{{/block}}

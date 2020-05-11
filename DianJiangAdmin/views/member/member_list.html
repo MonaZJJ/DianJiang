@@ -1,0 +1,104 @@
+{{extend '../share/layout.html'}} {{block 'title'}}会员列表{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/addAdvert.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css"> {{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="javascript:void(0);">会员列表</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="option-list form-inline clearfix">
+                    <div class="form-group col-lg-3 col-md-3">
+                        <label>微信昵称：</label>
+                        <input type="text" class="form-control" id="userName">
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3">
+                        <label>等级：</label>
+                        <select type="text" class="form-control" id="grade">
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-6">
+                        <label>注册时间：</label>
+                        <input type="text" class="form-control" readonly="" id="start"> ~
+                        <input type="text" class="form-control" readonly="" id="end">
+                    </div>
+                    <div class="form-group col-lg-4 col-md-4">
+                        <a class="btn btn-primary blueBtn" id="search">提交</a>
+                        <a class="btn btn-primary greyBtn" id="clear">重置</a>
+                    </div>
+                </div>
+                <div class="all_data_operation_box" style="padding-top: 20px;">
+                    <div class="disp_page_box pull-right">
+                        <label style="float:left;line-height: 34px;margin-right: 4px;">每页显示数量：</label>
+                        <select id="pagesize_dropdown" class="orderTypeSelect select2 pull-right" tabindex="-1" aria-hidden="true">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="40">40</option>
+                            <option value="200">200</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                            <option value="2000">2000</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="memberTableDiv">
+                    <table id="memberTable" class="table table-striped">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--模态框-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <p class="modal-title" id="myModalLabel">积分编辑</p>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal clearfix">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label form-text" style="text-align: right">状态：</label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="saleState" checked="checked" value="1">
+                                增加
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="radio" name="saleState" value="0">
+                                减少
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3" style="text-align: right">积分数量：</label>
+                            <input class="col-sm-6 form-control" type="number" id="number" style="width: 250px">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3" style="text-align: right">备注：</label>
+                            <input class="col-sm-6 form-control" type="text" id="remark" style="width: 250px">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="conserve">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/plugins/laydate/moment.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/js/memberList.js" type="text/babel"></script>
+{{/block}}

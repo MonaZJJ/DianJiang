@@ -1,0 +1,189 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}}
+{{block 'title'}}专场设置{{/block}}
+{{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/addAdvert.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+{{/block}}
+{{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-type="1" href="/platform/specialSetting">专场设置</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="first" >
+                        <table id="fieldTable">
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="second" style="margin-top: 40px;">
+                        <div class="form-box form-horizontal">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    <span class="red-star">*</span>标题：</label>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="Title" placeholder="请输入">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    <span class="red-star">*</span>类型：</label>
+                                <div class="col-md-3">
+                                    <select class="form-control" id="Type" style="width: 180px" disabled="disabled">
+                                        <option selected="selected" value="-1">请选择</option>
+                                        <option value="0">普通专场</option>
+                                        <option value="1">爆款专场</option>
+                                        <option value="2">推荐专场</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--选择商城的时候出现-->
+                            <div class="form-group">
+                                <label class="col-md-2 control-label"><span class="red-star">*</span>商品：</label>
+                                <div class="col-md-3">
+                                    <a class="btn btn-default" id="selectPro">选择商品</a>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div id="SpecifyProductBox1" style="display: none;">
+                                    <table id="fieldAddTable1" class="table table-bordered table-striped">
+                                    </table>
+                                    <div style="float: right; display: block;" id="divPage">
+                                        <span>每页5条，共</span>
+                                        <span id="spanPageCount">
+                                            <span class="currentIndex" id="bestCurrentIndex">1</span>/<span id="totalIndex1">0</span>
+                                        </span>
+                                        <span style="margin-right:10px">页</span>
+                                        <a style="cursor: pointer;" class="btn_pre_c" id="btnPrePage1">上一页</a>
+                                        <a style="cursor: pointer;" class="btn_next_c" id="btnNextPage1">下一页</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    <span class="red-star">*</span>简介：
+                                </label>
+                                <div class="col-md-6 sale-state">
+                                    <textarea class="form-control" name="Summary" id="Summary" style="width:410px;height: 75px;resize: none"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    <span class="red-star">*</span>状态：
+                                </label>
+                                <div class="col-md-6 sale-state" id="State">
+                                    <label class="checkbox-inline" style="text-align: left">
+                                        <input type="radio" name="state" value="1"
+                                               checked="checked"> 开启
+                                    </label>
+                                    <label class="checkbox-inline" style="text-align: left">
+                                        <input type="radio" name="state" value="0"> 关闭
+                                    </label>
+                                </div>
+                            </div>
+                            <!--<div class="form-group">-->
+                                <!--<label class="col-md-2 control-label">-->
+                                    <!--<span class="red-star">*</span>排序：</label>-->
+                                <!--<div class="col-md-10">-->
+                                    <!--<input type="number" class="form-control" id="sort" style="width: 120px">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="form-group" id="imgBox">
+                                <label class="col-md-2 control-label">
+                                    <span class="red-star">*</span>图片：</label>
+                                <div class="col-md-9">
+                                    <div class="icon-box_about_classify">
+                                        <div class="small_con">
+                                            <img src="/public/images/addImg.png" alt="" id="small_icon" style="width: 100px;height: 100px">
+                                            <div id="small_upload_pick" class="webuploader-container">
+                                                <div class="webuploader-pick"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <button class="btn btn-primary cancelBtn" id="cancelBtn">取消</button>
+                                    <button class="btn btn-primary submitBtn" id="submitBtn">提交</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--选择商品-->
+    <div class="modal fade" id="OrdinaryModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document" style="width:980px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">选择商品</h4>
+                </div>
+                <div class="modal-body" style="margin:auto">
+                    <div class="row form-group search_goods_box">
+                        <label for="" style="width:80px;text-align: right">商品名称：</label>
+                        <input type="text" class="form-control" id="Name" style="width:200px;display: inline-block;text-align:left;border-radius: 4px ">
+                        <button class="btn btn-primary" id="prosearchBtn" style="margin-left: 20px">查询</button>
+                        <div class="disp_page_box pull-right" style="position: relative;right: 45px">
+                            <label style="float:left;line-height: 34px;margin-right: 4px;">每页显示数量：</label>
+                            <select id="pagesize_dropdown" class="orderTypeSelect select2 pull-right" tabindex="-1"
+                                    aria-hidden="true">
+                                <option value="4" selected>4</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                                <option value="200">200</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                                <option value="2000">2000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="box_choice_goods" style="width: 900px;margin: 0 auto;">
+                            <table id="OrdinaryTable">
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="confirmBtn">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{{/block}}
+
+{{block 'footer'}}
+
+{{/block}}
+
+{{block 'requirejs'}}
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<script src="/public/plugins/iCheck/icheck.min.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/js/SpecialSetting.js" type="text/babel"></script>
+{{/block}}

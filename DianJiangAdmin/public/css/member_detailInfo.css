@@ -1,0 +1,53 @@
+.content {
+    background-color: #ffffff;
+    padding-top: 30px;
+    margin-left: 20px;
+}
+.row {
+    margin: 0px;
+}
+.r_title h3 {
+    font-size: 16px;
+    float: left;
+    width: 300px;
+    padding-left: 10px;
+    margin-top: 8px;
+}
+
+.r_title_r {
+    float: right;
+    padding-right: 50px;
+}
+.img_toggle {
+    width: 20px;
+    height: 20px;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+    top: 6px;
+}
+.img_toggle img{
+    width: 20px;
+    height: 20px;
+}
+.detailed{
+    padding-top: 20px;
+}
+.num{
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 30px;
+}
+.numDesc{
+    font-size: 14px;
+    color: #606266;
+    margin-top: 30px;
+}
+.tips{
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+

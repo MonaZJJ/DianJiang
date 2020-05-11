@@ -1,0 +1,126 @@
+{{extend '../share/layout.html'}} {{block 'title'}}会员详情{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/css/member_detailInfo.css"> {{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="head-type">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="javascript:void(0)">会员详情</a>
+                    </li>
+                </ul>
+            </div>
+            <div style="margin: 20px 0px">
+                <a class="backBtn">
+                    <img src="/public/images/back.png" alt="">
+                    <span>返回会员列表</span>
+                </a>
+            </div>
+            <div class="clearfix">
+                <div class="row" style="border-bottom: 1px solid #E5E5E5;padding: 10px 0;">
+                    <div class="col-sm-6">
+                        <div class="r_title">
+                            <h3>
+                                <span style="float: left">基本信息</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="r_title_r">
+                            <a class="img_toggle" href="javascript:void(0)">
+                                <img src="/public/images/icon_fold_1.png" class="icon_fold" style="display: inline;">
+                                <img src="/public/images/icon_down_1.png" class="icon_down" style="display: none;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="detailed chart_1">
+                        <div class="clearfix" id="baseInfo">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="border-bottom: 1px solid #E5E5E5;padding: 10px 0;">
+                    <div class="col-sm-3">
+                        <div class="r_title">
+                            <h3>
+                                <span style="float: left">统计信息</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="r_title_r">
+                            <a class="img_toggle" href="javascript:void(0)">
+                                <img src="/public/images/icon_fold_1.png" class="icon_fold" style="display: inline;">
+                                <img src="/public/images/icon_down_1.png" class="icon_down" style="display: none;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="detailed chart_1">
+                        <div class="form-group col-sm-12" style="border: 1px solid #E5E5E5;">
+                            <div class="col-sm-3" style="text-align: center">
+                                <p class="num" id="order"></p>
+                                <p class="numDesc">订单数</p>
+                            </div>
+                            <div class="col-sm-3" style="text-align: center">
+                                <p class="num" id="consume"></p>
+                                <p class="numDesc">消费金额(元)</p>
+                            </div>
+                            <div class="col-sm-3" style="text-align: center">
+                                <p class="num" id="integral"></p>
+                                <p class="numDesc">积分</p>
+                            </div>
+                            <div class="col-sm-3" style="text-align: center">
+                                <p class="num" id="money"></p>
+                                <p class="numDesc">货款</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row" style="border-bottom: 1px solid #E5E5E5;padding: 10px 0;">
+                    <div class="col-sm-3">
+                        <div class="r_title">
+                            <h3>
+                                <span style="float: left">订单信息</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="r_title_r">
+                            <a class="img_toggle" href="javascript:void(0)">
+                                <img src="/public/images/icon_fold_1.png" class="icon_fold" style="display: inline;">
+                                <img src="/public/images/icon_down_1.png" class="icon_down" style="display: none;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="detailed chart_1">
+                        <div class="form-group col-sm-12 box-body no-padding" id="orderInfo" style="border-bottom: 2px solid #ccc;">
+                            <table class="table" id="table_order">
+                                <tbody>
+                                    <tr style="background-color: #f8f8f8">
+                                        <th>商品名称</th>
+                                        <th>订单编号</th>
+                                        <th>订单状态</th>
+                                        <th>订单金额</th>
+                                        <th>支付金额</th>
+                                        <th>下单时间</th>
+                                        <th>支付时间</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/js/memberDetailInfo.js" type="text/babel"></script>
+{{/block}}

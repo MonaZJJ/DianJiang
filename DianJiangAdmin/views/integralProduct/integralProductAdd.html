@@ -1,0 +1,398 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}商品发布{{/block}} {{block 'head'}}
+<link type="text/css" rel="stylesheet" href="/public/plugins/ueditor/themes/default/css/ueditor.css">
+<link rel="stylesheet" href="/public/css/classifyList.css">
+<link rel="stylesheet" href="/public/css/storeAdd.css">
+<link rel="stylesheet" href="/public/css/productRelease.css">
+<link rel="stylesheet" href="/public/css/editMiniApp.css">
+<link rel="stylesheet" href="/public/plugins/pagination/pagination.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="/public/plugins/jquery-chosen/chosen.css">
+<link rel="stylesheet" href="/public/plugins/honeySwitch/honeySwitch.css">
+{{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box" style="padding-left: 185px">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div style="margin: 22px 0px 0px 15px;"><a class="backBtn"><img src="/public/images/back.png" alt=""><span>返回</span></a>
+            </div>
+            <div class="">
+                <div class="edit-head">
+                    <div class="outBox">
+                        <div class="headItemBox" id="firstHead">
+                            <div class="headItemNumber">
+                                1
+                            </div>
+                            <span>填写商品信息</span>
+                        </div>
+                        <div class="headLine"></div>
+                        <div class="headItemBox" id="secondHead" style="color: #AAAAAA">
+                            <div class="headItemNumber" style="border:2px solid rgba(170,170,170,1);">
+                                2
+                            </div>
+                            <span>填写商品属性</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-content edit-content">
+                    <div class="tab-pane active" id="first">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="box box-solid">
+                                        <div class="box-body">
+                                            <div class="form-box form-horizontal">
+                                                <div class="form-group col-md-12">
+                                                    <label>请输入商品名称：</label>
+                                                    <div style="width: 830px">
+                                                        <input type="text" class="form-control" id="Name"
+                                                               placeholder="请输入商品名称" style="width: 580px;height: 53px">
+                                                    </div>
+                                                </div>
+                                                <div class="form-inline col-md-12" style="margin-bottom: 20px">
+                                                    <div class="form-group" style="margin-right: 30px">
+                                                        <label>排序：</label>
+                                                        <input type="number" class="form-control"
+                                                               style="width: 400px;display: block;height: 53px"
+                                                               id="displayOrder"
+                                                               placeholder="请输入排序">
+                                                    </div>
+                                                </div>
+                                                <div class="form-inline col-md-12"
+                                                     style="margin-bottom: 20px">
+                                                    <div class="form-group">
+                                                        <label>服务：</label>
+                                                        <div style="width: 830px;height: 53px">
+                                                            <input type="text" class="form-control"
+                                                                   id="ServiceDescription"
+                                                                   placeholder="请输入服务描述"
+                                                                   style="width: 580px;height: 53px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-inline col-md-12"
+                                                     style="margin-bottom: 20px">
+                                                    <div class="form-group">
+                                                        <label>简介说明：</label>
+                                                        <div style="width: 830px;height: 53px">
+                                                            <input type="text" class="form-control"
+                                                                   id="FeeDescription"
+                                                                   placeholder="请输入简介说明"
+                                                                   style="width: 580px;height: 53px">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box box-solid">
+                                        <div class="box-body">
+                                            <div class="form-box form-horizontal" style="padding-top: 0">
+                                                <div id="specificationsBox">
+                                                    <div class="form-inline col-md-12" style="margin-bottom: 20px">
+                                                        <div class="form-group" style="margin-right: 30px">
+                                                            <label for="Credit" style="display: block">兑换积分：</label>
+                                                            <div class="input-group" style="width: 400px">
+                                                                <input type="text" class="form-control" id="Credit"
+                                                                       style="border-radius: 0!important;height: 53px"
+                                                                       placeholder="请输入兑换积分">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-inline col-md-12" style="margin-bottom: 20px">
+                                                        <div class="form-group" style="margin-right: 30px">
+                                                            <label for="Credit" style="display: block">兑换期限：</label>
+                                                            <div class="input-group" style="width: 400px">
+                                                                <input type="text" readonly class="form-control" id="CreditLimitTime"
+                                                                       style="border-radius: 0!important;height: 53px"
+                                                                       placeholder="请输入兑换期限">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-inline col-md-12" style="margin-bottom: 20px">
+                                                        <div class="form-group">
+                                                            <label for="Number" style="display: block">库存：</label>
+                                                            <div class="input-group" style="width: 400px">
+                                                                <input type="text" class="form-control" id="Number"
+                                                                       style="border-radius: 0!important;height: 53px"
+                                                                       placeholder="请输入库存：">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-md-2 control-label">
+                                                            <div class="col-md-3">
+                                                                <input class="btn btn-primary"
+                                                                       style="margin-top: 15px;display: none"
+                                                                       type="button" id="openSkuBox"
+                                                                       value="开启规格">
+                                                            </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="skuRow" style="display: none">
+                                                    <div id="skuContent">
+                                                        <input type="button" class="btn btn-default"
+                                                               id="btnshowSkuValue" value="编辑规格">
+                                                    </div>
+                                                    <div class="batch">
+                                                        <dl>
+                                                            <dd><span style="color: #666; font-size: 14px;">批量填充：</span>
+                                                            </dd>
+                                                            <dd>
+                                                                <input type="text" id="txtBatchMarketPrice"
+                                                                       class="form-control" placeholder="吊牌价"></dd>
+                                                            <dd>
+                                                            <dd>
+                                                                <input type="text" id="txtBatchShopPrice"
+                                                                       class="form-control" placeholder="会员价"></dd>
+                                                            <dd>
+                                                                <input type="text" id="txtBatchVipPrice"
+                                                                       class="form-control" placeholder="VIP价"></dd>
+                                                            <dd>
+                                                                <input type="text" id="txtBatchBigClientPrice"
+                                                                       class="form-control" placeholder="大客户价"></dd>
+                                                            <dd>
+                                                                <input type="text" id="txtBatchWeight"
+                                                                       class="form-control" placeholder="重量"></dd>
+                                                            <dd>
+                                                                <input type="text" id="txtBatchNumber"
+                                                                       class="form-control" placeholder="库存"></dd>
+                                                            <dd id="batchOk">
+                                                                <input type="button" class="btn btn-primary"
+                                                                       id="btnBatchOk" value="确定"></dd>
+                                                        </dl>
+                                                    </div>
+                                                    <p id="skuFieldHolder"
+                                                       style="padding: 0; margin: 0; padding: 0; display: none;"></p>
+                                                    <div style="position: relative; float: left; width: 100%;">
+                                                        <div id="skuTableHolder">
+                                                            <table width="100%" border="0" cellspacing="0"
+                                                                   cellpadding="2"
+                                                                   class="SpecificationTable">
+                                                                <tbody id="skuBody">
+
+                                                                </tbody>
+                                                            </table>
+                                                            <input type="button" id="btnAddItem" value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-btn">
+                            <button class="btn btn-primary" id="nextStep">下一步</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="second">
+                        <div>
+                            <ul>
+                                <li>
+                                    <div class="box box-solid">
+                                        <div class="box-header">
+                                            <h3 class="box-title">
+                                                图片和描述
+                                            </h3>
+                                            <div class="pull-right">
+                                                <button type="button"
+                                                        class="btn btn-sm pull-right btn-primary operate-btn"
+                                                        data-widget="collapse" data-toggle="tooltip"
+                                                        title="Collapse">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="box-body">
+                                            <div class="form-box form-horizontal">
+                                                <div class="form-group">
+                                                    <label class="col-md-2 control-label">
+                                                        <span class="red-star">*</span>主图：</label>
+                                                    <div class="col-md-9">
+                                                        <div class="icon-box_about_classify">
+                                                            <div class="small_con">
+                                                                <img src="/public/images/addImg.png" alt=""
+                                                                     id="small_icon" style="width: 100px;height: 100px">
+                                                                <div id="small_upload_pick"
+                                                                     class="webuploader-container">
+                                                                    <div class="webuploader-pick"></div>
+                                                                    <div id="rt_rt_1c8m7obd41ruu1uhn1vno1nfqkar1"
+                                                                         style="position: absolute; top: 0px; left: 0px; overflow: hidden; bottom: auto; right: auto; width: 50px; height: 50px;">
+                                                                        <input type="file" name="file"
+                                                                               class="webuploader-element-invisible"
+                                                                               multiple="multiple"
+                                                                               accept="image/gif,image/jpg,image/jpeg,image/bmp,image/png"><label
+                                                                            style="opacity: 0; width: 100%; height: 100%; display: block; cursor: pointer; background: rgb(255, 255, 255);"></label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div style="color: #ccc;margin-top: 8px">
+                                                            建议尺寸330*330像素
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-bottom: 10px">
+                                                    <label class="col-sm-2 control-label">商品图片：</label>
+                                                    <div class="col-sm-9">
+                                                        <div class="productImg" id="productImg">
+                                                            <div class="img-container">
+                                                                <img class="select-img" src="/public/images/addImg.png">
+                                                                <input class="img-input" type="file"
+                                                                       accept="image/gif,image/jpeg,image/jpg,image/png,image/svg">
+                                                                <img class="close-img" src="/public/images/close.png">
+                                                            </div>
+                                                        </div>
+                                                        <div style="color: #ccc;margin-top: 8px">
+                                                            建议尺寸750*750像素
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-bottom: 10px">
+                                                    <label class="col-sm-2 control-label">参数：</label>
+                                                    <div class="col-sm-9">
+                                                        <!-- 加载编辑器的容器 -->
+                                                        <script id="parameterEditor" name="content"
+                                                                type="text/plain"></script>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group" style="margin-bottom: 10px">
+                                                    <label class="col-sm-2 control-label">商品描述：</label>
+                                                    <div class="col-sm-9" id="editorContent">
+                                                        <!-- 加载编辑器的容器 -->
+                                                        <script id="hcEditor" name="content" type="text/plain"></script>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-btn">
+                            <button class="btn" style="margin-right: 12px" id="lastStep">上一步</button>
+                            <button class="btn btn-primary" id="finish">完成</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mask">
+        <div class="content-box">
+            <h2>选择商品分类</h2>
+            <a class="close">×</a>
+            <div class="coup-content">
+                <div id="table_header_classify">
+                    <div class="col-xs-1">
+                        编号
+                    </div>
+                    <div class="col-xs-7">
+                        分类名称
+                    </div>
+                    <div class="col-xs-4">
+                        操作
+                    </div>
+                </div>
+                <div id="table_content_classify">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--sku生成模态框-->
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="mySkuBox" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" style="width: 750px">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel1">
+                        选择要生成的规格
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div id="skuItems">
+                        <ul style="overflow: hidden" id="skuItemsUl">
+                            <li class="skuItem">
+                                <span class="formitemtitle" style="width:100%;float:left;" data-type="颜色" data-id="111">颜色：</span>
+                                <span class="skuItemList">
+                                    <ul style="width:100%;float:left;" class="skuItemListUl">
+                                        <li style="padding:5px 0;margin-bottom:0;float:left;" class="contentLi">
+                                            <div class="checkBoxList">
+                                                <input type="checkbox" data-id="1">
+                                                <span style="float:left;display: block">红</span>
+                                            </div>
+                                        </li>
+                                        <li style="padding:5px 0;margin-bottom:0;float:left;" class="contentLi">
+                                            <div class="checkBoxList">
+                                                <input type="checkbox" data-id="2">
+                                                <span style="float:left;display: block">白</span>
+                                            </div>
+                                        </li>
+                                        <li style="padding:5px 0;margin-bottom:0;float:left;" class="contentLi">
+                                            <div class="checkBoxList">
+                                                <input type="checkbox" data-id="3">
+                                                <span style="float:left;display: block">蓝</span>
+                                            </div>
+                                        </li>
+                                        <li style="float:left;overflow:hidden;width:auto;" class="addBox">
+                                            <a id="btnadd_53" href="javascript:;"
+                                               style="line-height: 1.8; float: left;">添加</a>
+                                            <span style="margin-top: 10px; display: none;overflow: hidden" id="sp_53">
+                                                <input type="text" id="txt_53" class="form-control"
+                                                       style="width:160px;float: left" name="txt_53">
+                                                <input type="button" id="btnins_53"
+                                                       class="btn btn-primary addSkuValueBtn" value="保存"
+                                                       style="margin-left:10px;float: left">
+                                            </span>
+                                        </li>
+
+                                    </ul>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="clearData">清空
+                    </button>
+                    <button type="button" class="btn btn-primary" id="sureBtn">
+                        确定
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="/public/plugins/laydate/laydate.js"></script>
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/plugins/sortable/Sortable.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<script src="/public/js/uploadProductImg.js"></script>
+<script src="/public/js/uploadProductImgForSku.js"></script>
+<script src="/public/js/jqPaginator.js"></script>
+<script src="/public/plugins/pagination/jquery.pagination.js"></script>
+<script src="/public/plugins/jquery-chosen/chosen.jquery.js"></script>
+<script src="/public/js/uploader_pic_toLibraryforProduct.js"></script>
+<script src="/public/plugins/ueditor/ueditor.config.js"></script>
+<script src="/public/plugins/ueditor/ueditor.all.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/plugins/honeySwitch/honeySwitch.js"></script>
+<script src="/public/js/integralProductListAdd.js"></script>
+{{/block}}

@@ -1,0 +1,247 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}广告设置{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/nav.css">
+<link rel="stylesheet" href="/public/plugins/bootstrap-table/bootstrap-table.css">
+<link rel="stylesheet" href="/public/css/productRelease.css">
+{{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box" style="padding-top: 30px">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <div class="">
+                <div class="head-type">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-type="1" id="firstBtn" data-toggle="tab" href="#first">广告列表</a>
+                        </li>
+                        <li>
+                            <a data-type="2" data-toggle="tab" href="#second">添加</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content edit-content" style="margin-top: 40px">
+                    <div class="tab-pane active" id="first">
+                        <div>
+                            <table id="bannerTable" class="table table-striped">
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="second">
+                        <div class="form-box form-horizontal" style="border-top: 0;">
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" style="color: #999;">标题：</label>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="title2">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" style="color: #999;">链接类型：</label>
+                                <div class="col-md-3">
+                                    <select class="form-control" id="type2">
+                                        <option value="-1">请选择</option>
+                                        <option value="0">商品</option>
+                                        <option value="1">分类</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--选择商品的时候出现-->
+                            <div class="form-group" id="productBox">
+                                <label class="col-md-2 control-label">商品名称：</label>
+                                <div class="col-md-8">
+                                    <a data-toggle="modal" href="#choicePresentModal" class="btn btn-default">选择商品</a>
+                                    <span class="goods-name_final" data-id="0" style="display: none"></span>
+                                </div>
+                            </div>
+                            <div class="form-group" style="display: none" id="performanceBox">
+                                <label class="col-md-2 control-label"><span
+                                        class="red-star">*</span>商品分类：</label>
+                                <div class="col-md-2">
+                                    <input type='button' value='选择分类'
+                                           class="btn btn-default uploadBtn" id="selectClassify"/>
+                                </div>
+                                <div class="col-md-2">
+                                    <p class="classifyName" data-id="0" id="classifyName"></p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" style="color: #999;">状态：</label>
+                                <div class="col-md-3">
+                                    <select class="form-control" id="state2">
+                                        <option selected="selected" value="-1">请选择</option>
+                                        <option value="0">关闭</option>
+                                        <option value="1">开启</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label" style="color: #999;">排序：</label>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="displayOrder2">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 50px">
+                                <label class="col-md-2 control-label"
+                                       style="font-size: 18px;font-weight: 600;color: #333;">广告图：</label>
+                                <div class="col-md-9">
+                                    <div class="icon-box_about_classify">
+                                        <div class="small_con">
+                                            <img src="/public/images/addImg.png" alt="" id="small_icon"
+                                                 style="width: 100px;height: 100px">
+                                            <div id="small_upload_pick" class="webuploader-container"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-2 control-label">
+                                    <span class="red-star"></span></label>
+                                <div class="col-md-9">
+                                    <div style="color: #ccc;">
+                                        建议尺寸710*380像素
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9 col-md-offset-2">
+                                    <button type="button" class="btn btn-primary" id="confirmBtn">确定</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal fade bs-example-modal-lg" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">编辑</h4>
+            </div>
+            <div class="modal-body">
+                <div class="box-body">
+                    <div class="form-box form-horizontal" style="border-top: 0;">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color: #999;">标题：</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control" id="title3">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color: #999;">链接类型：</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="type3">
+                                    <option value="-1">请选择</option>
+                                    <option value="0">商品</option>
+                                    <option value="1">分类</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--选择商品的时候出现-->
+                        <div class="form-group" id="productBox3">
+                            <label class="col-md-2 control-label" style="color: #999;">商品名称：</label>
+                            <div class="col-md-8">
+                                <a data-toggle="modal" href="#choicePresentModal" class="btn btn-default">选择商品</a>
+                                <span class="goods-name_final3" data-id="0" style="display: none"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color: #999;">状态：</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="state3">
+                                    <option selected="selected" value="-1">请选择</option>
+                                    <option value="0">关闭</option>
+                                    <option value="1">开启</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" style="color: #999;">排序：</label>
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" id="displayOrder3">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"
+                                   style="font-size: 18px;font-weight: 600;color: #333;">广告图：</label>
+                            <div class="col-md-9">
+                                <div class="icon-box_about_classify">
+                                    <div class="small_con">
+                                        <img src="/public/images/addImg.png" alt="" id="small_icon3"
+                                             style="width: 100px;height: 100px">
+                                        <div id="small_upload_pick3" class="webuploader-container"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">
+                                <span class="red-star"></span></label>
+                            <div class="col-md-9">
+                                <div style="color: #ccc;">
+                                    建议尺寸710*380像素
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="editConfirmBtn">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--选择商品模态框-->
+<div class="modal fade" id="choicePresentModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document" style="width:980px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">选择商品</h4>
+            </div>
+            <div class="modal-body" style="margin:auto">
+                <div class="row form-group search_goods_box" style="margin-left: 0;margin-right: 0;">
+                    <label for="" style="width:80px;text-align: right">商品名称：</label>
+                    <input type="text" class="form-control" id="choice_presentName"
+                           style="width:200px;display: inline-block;text-align:left;border-radius: 4px ">
+                    <button class="btn btn-primary" id="prosearchBtn" style="margin-left: 20px">查询</button>
+                </div>
+                <div class="row form-group" style="margin-left: 0;margin-right: 0;">
+                    <div class="box_choice_goods">
+                        <table id="choice_goods_tb">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="edit_Department_confirm">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--选择商品模态框end-->
+
+
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/plugins/webuploader/webuploader.js"></script>
+<script src="/public/js/upload_icon_pic.js"></script>
+<!--<script src="/public/plugins/viewer/viewer.min.js"></script>-->
+<!--<script src="/public/plugins/ueditor/ueditor.config.js"></script>-->
+<!--<script src="/public/plugins/ueditor/ueditor.all.js"></script>-->
+<script src="/public/plugins/bootstrap-table/bootstrap-table.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+<script src="/public/plugins/bootstrap-table/bootstrap-table-export.js"></script>
+<script src="/public/js/advertisingSet.js" type="text/babel"></script>
+
+{{/block}}

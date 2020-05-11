@@ -1,0 +1,18 @@
+<!--dishes_list.html-->
+{{extend '../share/layout.html'}} {{block 'title'}}首页{{/block}} {{block 'head'}}
+<link rel="stylesheet" href="/public/css/index.css"> {{/block}} {{block 'content'}}
+<section class="content container-fluid" id="all_box">
+    <div class="main_list_content type_box">
+        <div class="list_title_header" style="float:left;width:100%">
+            <!-- 总容器box -->
+            <div Id="indexBox" style="margin: 0 auto;margin-top: 300px;text-align: center;font-size: 36px;">
+                欢迎使用典匠生活管理后台
+            </div>
+            <!-- 总容器box end -->
+        </div>
+    </div>
+</section>
+{{/block}} {{block 'footer'}} {{/block}} {{block 'requirejs'}}
+<script src="/public/plugins/echarts/echarts.min.js"></script>
+<script src="/public/js/index.js"></script>
+{{/block}}
